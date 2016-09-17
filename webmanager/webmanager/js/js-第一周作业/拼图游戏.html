@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/**{padding:0;margin:0;}*/
+			
+			#box {
+				width: 400px;
+				height: 400px;
+				border: 1px solid lightcoral;
+				margin: 0 auto;
+			}
+			
+			ul,
+			li {
+				list-style: none;
+				float: left;
+			}
+			
+			li {
+				margin: 4px;
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+
+			<ul>
+				<li><img src="img/1.jpg" /></li>
+				<li><img src="img/2.jpg" /></li>
+				<li><img src="img/3.jpg" /></li>
+				<li><img src="img/4.jpg" /></li>
+				<li><img src="img/5.jpg" /></li>
+				<li><img src="img/6.jpg" /></li>
+				<li><img src="img/7.jpg" /></li>
+				<li><img src="img/8.jpg" /></li>
+				<li><img src="img/bt.jpg" /></li>
+			</ul>
+		</div>
+		<input type="button" id="reset" value="重置" />
+
+		<script type="text/javascript">
+			var imgs = document.getElementsByTagName("img");
+			var lis = document.getElementsByTagName("li");
+			var temp = "http://127.0.0.1:8020/Javascript%E4%BD%9C%E4%B8%9A/img/bt.jpg";
+			var reset = document.getElementById("reset");
+
+			/*-------------随机数函数-------------*/	          
+			reset.onclick = function() {
+				var numer = [];
+				var str="";
+				for(var j = 0; j < 9;) {
+					var flag = true;
+					var num = parseInt(Math.random() * 9);
+					for(var i = 0; i < numer.length; i++) {
+						if(num == numer[i]) {
+							flag = false;
+						}
+					}
+					if(flag) {
+						numer.push(num);
+							j++;
+						if(num==8){
+							imgs[j].src="img/bt.jpg";
+							str=str+imgs[j].src+" ";
+						}else{
+							num=num+1;
+							imgs[j].src="img/"+num+".jpg";
+							str=str+imgs[j].src+" ";
+						}
+					}
+				}
+				document.write(str);
+			}
+
+			for(var i = 0; i < lis.length; i++) {
+				lis[i].index = i;
+				lis[i].onclick = function() {
+					/*判断2和0的判断*/
+					if(this.index == 2 || this.index == 0) {
+						if(imgs[this.index + 3].src == temp) {
+							imgs[this.index + 3].src = imgs[this.index].src;
+							imgs[this.index].src = temp;
+						}
+						if(this.index == 2) {
+							if(imgs[this.index - 1].src == temp) {
+								imgs[this.index - 1].src = imgs[this.index].src;
+								imgs[this.index].src = temp;
+							}
+						}
+						if(this.index == 0) {
+							if(imgs[this.index + 1].src == temp) {
+								imgs[this.index + 1].src = imgs[this.index].src;
+								imgs[this.index].src = temp;
+							}
+						}
+					}
+					/*判断5和8和4的情况*/
+					if(this.index == 5 || this.index == 8 || this.index == 4) {
+						if(imgs[this.index - 3].src == temp) {
+							imgs[this.index - 3].src = imgs[this.index].src;
+							imgs[this.index].src = temp;
+						}
+						if(imgs[this.index - 1].src == temp) {
+							imgs[this.index - 1].src = imgs[this.index].src;
+							imgs[this.index].src = temp;
+						}
+						if(this.index == 5 || this.index == 4) {
+							if(imgs[this.index + 3].src == temp) {
+								imgs[this.index + 3].src = imgs[this.index].src;
+								imgs[this.index].src = temp;
+							}
+						}
+					}
+
+					/*判断3和6和4的情况*/
+					if(this.index == 3 || this.index == 6 || this.index == 4) {
+						if(imgs[this.index - 3].src == temp) {
+							imgs[this.index - 3].src = imgs[this.index].src;
+							imgs[this.index].src = temp;
+						}
+						if(imgs[this.index + 1].src == temp) {
+							imgs[this.index + 1].src = imgs[this.index].src;
+							imgs[this.index].src = temp;
+						}
+						if(this.index == 3) {
+							if(imgs[6].src == temp) {
+								imgs[6].src = imgs[3].src;
+								imgs[3].src = temp;
+							}
+						}
+					}
+
+					/*判断1和7*/
+					if(this.index == 1 || this.index == 7) {
+						if(imgs[this.index - 1].src == temp) {
+							imgs[this.index - 1].src = imgs[this.index].src;
+							imgs[this.index].src = temp;
+						}
+						if(imgs[this.index + 1].src == temp) {
+							imgs[this.index + 1].src = imgs[this.index].src;
+							imgs[this.index].src = temp;
+						}
+						if(this.index == 1) {
+							if(imgs[4] == temp) {
+								imgs[4].src = imgs[1].src;
+								imgs[1].src = temp;
+							}
+						}
+						if(this.index == 7) {
+							if(imgs[this.index - 3] == temp) {
+								imgs[this.index - 3].src = imgs[this.index].src;
+								imgs[this.index].src = temp;
+							}
+						}
+					}
+				}
+			}
+		</script>
+	</body> 
+
+</html>

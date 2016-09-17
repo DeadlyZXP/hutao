@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>随机点名2</title>
+		<style>
+			#table{
+				width: 800px;
+				height: 600px;
+				border: 1px solid #eee;
+				margin: 0 auto;
+				border-collapse: separate;
+			}
+			td{
+				background: #00C47D;
+				text-align: center;
+			}
+			#div1{
+				width: 300px;
+				height: 100px;
+				margin: 0 auto;
+			}
+			#div1 input{
+				width: 148px;
+				height: 50px;
+				float: left;
+			}
+			#div1 input:nth-child(3){
+				width: 296px;
+			}
+			#div2{
+				width: 300px;
+				height: 200px;
+				background: #eee;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="table">
+			<tr>
+				<td>刘晓楠</td><td>崔鹏程</td><td>荣宛如</td><td>种奔奔</td><td>姜天华</td>
+				<td>彭展</td><td>杨金平</td><td>刘军红</td>
+			</tr>
+			<tr>
+				<td>郭畅</td><td>齐炳申</td><td>郑志浩</td><td>张新鹏</td><td></td>
+				<td>宋雪娇</td><td>武慧章</td><td>冯煜超</td>
+			</tr>
+			<tr>
+				<td>马政法</td><td>王乐平</td><td>曹毅</td><td>黄宏伟</td><td>黄广健</td>
+				<td>许鹏程</td><td>王国章</td><td>武翔</td>
+			</tr>
+			<tr>
+				<td>王浩然</td><td>梁明庆</td><td>宗黎明</td><td>吴明美</td><td>李泮贞</td>
+				<td>李晓宁</td><td>苗园园</td><td>程平</td>
+			</tr>
+			<tr>
+				<td>蒋东兵</td><td>赵凯芳</td><td>陈欣欣</td><td></td><td>于盟</td><td>杨倩倩</td>
+				<td>王正琛</td><td>刘波</td>
+			</tr>
+			<tr>
+				<td>周玉腾</td><td>彭琛</td><td></td><td>王昊</td><td>田野</td>
+				<td></td><td></td><td>孟钰</td>
+			</tr>
+			<tr>
+				<td>周振刚</td><td>张倩郡</td><td>刘成杰</td><td>汪婷婷</td><td>刘东</td>
+				<td>陈龙</td><td>邝光前</td><td>杜必林</td>
+			</tr>
+			<tr>
+				<td>宋红勇</td><td>宗文健</td><td>王金庆</td><td>王昊</td><td></td>
+				<td>黄晓辉</td><td>李琪</td><td></td>
+			</tr>
+		</table>
+		<div id="div1">
+			<input type="button" id="btn1" value="点击有惊喜"/>
+			<input type="button" id="btn2" value="惊喜十连击"/>
+			<input type="button" id="btn3" value="结束" />
+		</div>
+		<div id="div2"></div>
+		<script>
+			var Btn1=document.getElementById("btn1");
+			var Btn2=document.getElementById("btn1");
+			var Btn3=document.getElementById("btn3");
+			var Td=document.getElementsByTagName("td");
+			var Odiv=document.getElementById("div2");
+			var timer;
+			var b;
+			var c;
+			Btn1.onclick=function(){
+				for(var i=0;i<Td.length;i++){
+					Td[i].style.backgroundColor="#00C47D";
+				}
+				timer = setInterval(function() {
+					b= Math.floor(Math.random() * Td.length);
+					c=b;
+					Td[b].style.backgroundColor = "floralwhite";
+					Odiv.innerHTML =Td[b].innerHTML ;
+					var timer1 = setTimeout(function() {
+						Td[b].style.backgroundColor = "#00C47D"; 
+					}, 400);
+				}, 500);
+			}
+			Btn3.onclick=function(){
+				clearInterval(timer);
+//				clearInterval(timer1);
+				if(b==12||b==35||b==42||b==45||b==46||b==60||b==63){
+						Odiv.innerHTML=Td[10].innerHTML;
+						Td[10].style.background="#Eee";
+				}else{
+						Odiv.innerHTML=Td[b].innerHTML;
+						Td[b].style.background="#Eee";
+				}
+			}
+		</script>
+	</body>
+</html>

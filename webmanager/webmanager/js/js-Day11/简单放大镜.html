@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul,li{
+				list-style: none;
+			}
+			ul{
+				height: 170px;
+			}
+			li{
+				float: left;
+				/*margin-left: 20px;*/
+			}
+			#div1{
+				width: 400px;
+				height: 400px;
+				position: absolute;
+				/*top: 0;
+				left: 0;*/
+				display: none;
+			}
+		</style>
+		<script src="js/EX.js"></script>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li id="li1"><img src="img/shirt_1.jpg"/></li>
+			<li id="li1"><img src="img/shirt_2.jpg"/></li>
+			<li id="li1"><img src="img/shirt_3.jpg"/></li>
+			<li id="li1"><img src="img/shirt_4.jpg"/></li>
+		</ul>
+<!--		<div id="div1"></div>-->
+		<!--方法二-->
+		<div id="div1"><img src="img/shirt_1_big.jpg"/></div>
+		<script>
+			var Ul=document.getElementById("ul1");
+			var Lilist=document.getElementsByTagName("li");
+			for(var i=0;i<Lilist.length;i++){
+//				Lilist[i].index=i;
+				Lilist[i].onmousemove=function(event){
+//					alert(this.index);
+					event=event||window.event;
+					var Odiv=document.getElementById("div1");
+					var top=event.clientY+20;
+					var left=event.clientX+20;
+					Odiv.style.top=top+"px";
+					Odiv.style.left=left+"px";
+					Odiv.style.display="block";
+//					alert(this.innerHTML);
+					
+//					if(this.innerHTML.indexOf("shirt_1")>0){
+//						Odiv.style.background="url(img/shirt_1_big.jpg)"
+//					}else if(this.innerHTML.indexOf("shirt_2")>0){
+//						Odiv.style.background="url(img/shirt_2_big.jpg)"
+//					}else if(this.innerHTML.indexOf("shirt_3")>0){
+//						Odiv.style.background="url(img/shirt_3_big.jpg)"
+//					}else if(this.innerHTML.indexOf("shirt_4")>0){
+//						Odiv.style.background="url(img/shirt_4_big.jpg)"
+//					}
+					//方法二
+					var Odivsrc=this.children[0].src.replace(".jpg","_big.jpg")
+					Odiv.children[0].src=Odivsrc;
+				}
+				
+				Lilist[i].onmouseout=function(){
+					var Odiv=document.getElementById("div1");
+					Odiv.style.display="none";
+				}
+			}
+		</script>
+	</body>
+</html>

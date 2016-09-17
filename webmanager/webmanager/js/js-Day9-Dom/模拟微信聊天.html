@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 200px;
+				height: 400px;
+				border: 1px solid #E0E0E0;
+				margin: 0 auto;
+			}
+			#txt{
+				width: 158px;
+				height: 34px;
+				float: left;
+				margin-top: 360px;
+			}
+			#btn{
+				width: 38px;
+				height: 40px;
+				float: right;
+				margin-top: 360px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<input type="text" id="txt" />
+			<input type="button" id="btn" value="发送" />
+		</div>
+		<script>
+			var Txt=document.getElementById("txt");
+			var Btn=document.getElementById("btn");
+			var Odiv=document.getElementById("div1");
+			Btn.onclick=function(){
+				var txt=Txt.value;
+				var Odiv1=document.createElement("div");
+				var pp=document.createElement("p");
+				Odiv.appendChild(Odiv1);
+				Odiv1.appendChild(pp);
+//				Odiv1.style.display="block";
+				Odiv1.style.width="150px";
+				Odiv1.style.height="30px";
+				Odiv1.style.marginTop="20px";
+				Odiv1.style.marginLeft="30px";
+				Odiv1.style.border="1px solid #E0E0E0";
+				Odiv1.style.position="relative";
+				pp.innerHTML=txt;
+				pp.style.position="absolute";
+				pp.style.top="-8px";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		输入年份:<input type="text" id="Year" />
+		<p id="pp"></p>
+		<input type="button" id="btn" value="判断" /><br /><br />
+		年:<input type="text" id="Year1"/>
+		月:<input type="text" id="Mouth"/>
+		日:<input type="text" id="Day"/>
+		时:<input type="text" id="Hour"/>
+		分:<input type="text" id="Mintue"/>
+		秒:<input type="text" id="Second"/><br /><br />
+		<input type="button" id="btn1" value="转换 "/>
+		<p id="pp2"></p><br /><br />
+		输入一个月份:<input type="text" id="mouth2" /><br /><br />
+		<input type="button" id="btn2" value="判断" />
+		<p id="pp3"></p>
+		
+		<script>
+			var d=new Date();
+			var da=document.getElementById("Year");
+			var btn=document.getElementById("btn");
+			var pp=document.getElementById("pp");
+			btn.onclick=function(){
+				d.setFullYear(da.value);
+				if(d.getFullYear()%4==0&&d.getFullYear()%100!=0){
+					pp.innerHTML="闰年";
+				}else if(d.getFullYear()%400==0){
+					pp.innerHTML="闰年";
+				}else{
+					pp.innerHTML="不是闰年";
+				}
+			}
+			
+			var year1=document.getElementById("Year1");
+			var mouth=document.getElementById("Mouth");
+			var day=document.getElementById("Day");
+			var hour=document.getElementById("Hour");
+			var mintue=document.getElementById("Mintue");
+			var second=document.getElementById("Second");
+			var btn1=document.getElementById("btn1");
+			var pp2=document.getElementById("pp2");
+			btn1.onclick=function(){
+				var year11=year1.value;
+				var mouth1=mouth.value;
+				var day1=day.value;
+				var hour1=hour.value;
+				var mintue1=mintue.value;
+				var second1=second.value;
+				var date=year11;
+				date=date.concat("-"+mouth1);
+				date=date.concat("-"+day1);
+				date=date.concat("-"+hour1);
+				date=date.concat(":"+mintue1);
+				date=date.concat(":"+second1);
+				pp.innerHTML=date;
+			}
+			//
+			var btn2=document.getElementById("btn2");
+			var mou=document.getElementById("mouth2");
+			var pp3=document.getElementById("pp3");
+			btn2.onclick=function(){
+				var a =new Date();
+				var aa=a.getFullYear();
+				var btn22=mou.value;
+				if(btn22==1||btn22==3||btn22==5||btn22==7||btn22==8||btn22==10||btn22==12){
+					pp3.innerHTML=31+"天";
+				}else if(btn22==4||btn22==6||btn22==9||btn22==11){
+					pp3.innerHTML=30+"天";
+				}else if(btn22==2){
+					if(aa%4==0&&aa%100!=0){
+						pp3.innerHTML=29+"天";
+					}else if(aa%400==0){
+						pp3.innerHTML=29+"天";
+					}else{
+						pp3.innerHTML=28+"天";
+					}
+				}else{
+					pp3.innerHTML="请输入正确月份";
+				}
+			}
+			//
+		</script>
+	</body>
+</html>

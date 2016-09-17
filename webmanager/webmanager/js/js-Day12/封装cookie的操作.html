@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//添加cookie
+			function Setcookie(name,value,days){
+				var date=new Date();
+				date.setDate(date.getDate()+days);
+				document.cookie=name+"="+value+";expires="+date;
+			}
+			//获取cookie
+			function Getcookie(name){
+				var cookieValue;
+				var strCookie=document.cookie;
+				var arrCookie=strCookie.split("; ");
+				for(var i=0;i<arrCookie.length;i++){
+					var item=arrCookie[i].split("=");
+					if(arrCookie[0]==name){
+						cookieValue=item[1];
+					}
+				}
+				return cookieValue;
+			}
+			//删除cookie
+			function Removecookie(name){
+				var date=new Date();
+				date.setDate(date.getDate()-1);
+				document.cookie=name+"="+";expires="+date;
+				//或者
+//				Setcookie(name,,-1);
+			}
+		</script>
+	</body>
+</html>

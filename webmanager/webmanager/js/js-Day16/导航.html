@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{padding: 0;margin: 0;}
+			a{text-decoration: none;
+				color: black;}
+			ul,li{list-style: none;}
+			#ul1{
+				width: 600px;
+				height: 60px;
+				background: lightslategrey;
+				color: white;
+				margin: 0 auto;
+				line-height: 60px;
+			}
+			#ul1 li{
+				float: left;
+				width: 100px;
+				text-align: center;
+				display: block;
+			}
+			.lowmenu a{
+				display: none;
+				width: 100px;
+				float: left;
+				height: 25px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>
+				<a href="#">导航1</a>
+				<div class="lowmenu">
+					<a href="#">菜单1</a>
+					<a href="#">菜单1</a>
+					<a href="#">菜单1</a>
+					<a href="#">菜单1</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">导航2</a>
+				<div class="lowmenu">
+				<a href="#">菜单2</a>
+				<a href="#">菜单2</a>
+				<a href="#">菜单2</a>
+				<a href="#">菜单2</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">导航3</a>
+				<div class="lowmenu">
+					<a href="#">菜单3</a>
+					<a href="#">菜单3</a>
+					<a href="#">菜单3</a>
+					<a href="#">菜单3</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">导航4</a>
+				<div class="lowmenu">
+					<a href="#">菜单4</a>
+					<a href="#">菜单4</a>
+					<a href="#">菜单4</a>
+					<a href="#">菜单4</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">导航5</a>
+				<div class="lowmenu">
+					<a href="#">菜单5</a>
+					<a href="#">菜单5</a>
+					<a href="#">菜单5</a>
+					<a href="#">菜单5</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">导航6</a>
+				<div class="lowmenu">
+					<a href="#">菜单6</a>
+					<a href="#">菜单6</a>
+					<a href="#">菜单6</a>
+					<a href="#">菜单6</a>
+				</div>
+			</li>
+		</ul>
+	<script>
+		var Ul1=document.getElementById("ul1");
+		var Odiv=document.getElementsByClassName("lowmenu");
+		var lis = document.getElementsByTagName("li");
+	</script>
+	</body>
+</html>

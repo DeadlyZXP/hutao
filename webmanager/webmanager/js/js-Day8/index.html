@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var s1="this is string";
+			var s2=new String("this is dtring");
+//			var s3 String("a");
+			//提取cherries,limes,oranges,apples,apples
+			var s="This a list of items :cherries, limes, oranges, apples, apples .this list end";
+			var ss=s.split(":")[1];
+//			console.log(ss);
+			var sss=ss.split(".")[0];
+//			alert(sss);
+			var s4=s.substring(s.indexOf(":")+1,s.indexOf("."));
+//			console.log(s4);
+			var s5=s.slice(21,58);
+//			console.log(s5);
+			var s6=s.slice(s.indexOf(":")+1);
+//			console.log(s6);
+			var s7=s.slice(s.indexOf(":")+1,s.indexOf("."));
+//			console.log(s7);
+			var arr=s7.split(", ");
+//			console.log(arr);
+			//判断某个变量是String类型并且不是空的
+			var a;
+			if(typeof a=="string"&&a>0){
+				
+			}
+			//字符串替换 s中第二个apples替换为bananas
+//			var num=s.indexOf("apples");
+//			var num2=s.indexOf("apples",num+5);
+//			console.log(num2);
+//			var s8=s.replace("apples","bananas");
+//			var s9=s8.replace("apples","bananas");
+//			var s10=s9.replace("bananas","apples");
+//			console.log(s8);
+//			console.log(s9);
+//			console.log(s10);
+//			var s11=s.slice(num2).replace("apples","bananas");
+//			var s12=s.slice(0,num2).concat(s11);
+//			console.log(s11);
+//			console.log(s12);
+//		    console.log(s.split(", "));
+		    //将字符串中多次重复的apples依次替换
+		    var str="This a list of items:cherries,limes,oranges,apples,apples,apples,apples,apples,apples,apples,apples.this list end.";
+			var time=0;
+			var str21=str.substring(str.indexOf(":")+1,str.indexOf("."));
+			var arr=["Bsan","Peach","lemon","pear","avocado","cantaloupe"];
+			var str22;
+			var i=0;
+			while(i>=0){
+				i=str21.indexOf("apples",i);
+				if(i>=0){
+					time++;
+					if(time==1){
+						str22=str21.replace("apples",arr[time-1]);
+					}else{
+						if(time<=arr.length){
+						str22=str22.replace("apples",arr[time-1]);
+						}else{
+							str22=str22.replace("apples",arr[time%arr.length-1]);
+						}
+					}
+					i+="apples".length;
+				}
+			}
+//			console.log(time);
+//			console.log(str22);
+			//替换第二个apples第二种方法
+			var s13=s.split("apples");
+			var s14="";
+			for(var i=0;i<s13.length;i++){
+				if(i==s13.length-1){
+					s14+=s13[i]
+				}else if(i==1){
+					s14+=s13[i]+"Bananas";
+				}else{
+					s14+=s13[i]+"apples";
+				}
+			}
+//			document.write(s14);
+			//封装成函数
+			function Replace(arr,newstr,oldstr,num){
+				var s15=arr.split(newstr);
+				var s16="";
+				for(var i=0;i<s15.length;i++){
+					if(i==s15.length-1){
+						s16+=s15[i]
+					}else if(i==num-1){
+						s16+=s15[i]+oldstr;
+					}else{
+						s16+=s15[i]+newstr;
+					}
+				}
+				return s16;
+			}
+			
+//			document.write("<br />")
+//			document.write(Replace(s,"apples","Bananas",2));
+			var ch="ABCDefghiJKLmnoPQrst";
+			var sum=0;
+			var sum1=0;
+			for(var i=0;i<ch.length;i++){
+				if(ch.charCodeAt(i)>97){
+					sum+=1;
+				}else{
+					sum1+=1;
+				}
+				
+			}
+//			alert(sum);
+//			alert(sum1);
+			function Replace(){
+				
+			}
+		</script>
+	</body>
+</html>

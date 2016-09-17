@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#showNum{
+				width: 300px;
+				height: 100px;
+				border: 1px solid #CCCCCC;
+				margin: 0 auto;
+			}
+			#numBox{
+				width: 300px;
+				height: 450px;
+				border: 1px solid #CCCCCC;
+				margin: 0 auto;
+			}
+			td{
+				width: 75px;
+				height: 86px;
+				text-align: center;
+				font-size: 30px;
+				font-weight: bold;
+			}
+			td:hover{
+				background: #C5C5C5;
+			}
+			.tr1{
+				background: cornflowerblue;
+			}
+			.operate{
+				background:green;
+			}
+			.sum{
+				color: darkgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="showNum"></div>
+		<div id="numBox">
+			<table border="" cellspacing="0" cellpadding="">
+				<tr id="tr1">
+					<td class="tr1">AC</td>
+					<td class="tr1"><--</td>
+					<td class="tr1 count">%</td>
+					<td class="operate count">/</td>
+				</tr>
+				<tr id="tr2">
+					<td class="count">7</td>
+					<td class="count">8</td>
+					<td class="count">9</td>
+					<td class="operate count">*</td>
+				</tr>
+				<tr id="tr3">
+					<td class="count">4</td>
+					<td class="count">5</td>
+					<td class="count">6</td>
+					<td class="operate count">-</td>
+				</tr>
+				<tr id="tr4">
+					<td class="count">1</td>
+					<td class="count">2</td>
+					<td class="count">3</td>
+					<td rowspan="2" class="operate count">+</td>
+				</tr>
+				<tr id="tr5">
+					<td class="count">.</td>
+					<td class="count">0</td>
+					<td class="sum">=</td>
+				</tr>
+			</table>
+		</div>
+		<script type="text/javascript">
+			var showNum=document.getElementById("showNum");
+			var numBox=document.getElementById("numBox");
+			var count=document.getElementsByClassName("count");
+			var tr1=document.getElementById("tr1");
+			var tr5=document.getElementById("tr5");
+			var str="";
+ 			var num1="";
+ 			var num2="";
+ 			var operation="";
+			var arr=[];
+			tr5.lastElementChild.onclick=function(){
+				if(str.indexOf("/")>0){
+						i=str.indexOf("/");
+						arr=str.split("/");
+						num1=Number(arr[0]);
+						num2=Number(arr[1]);
+						showNum.innerHTML=showNum.innerHTML+"="+num1/num2;
+					}
+				if(str.indexOf("+")>0){
+						i=str.indexOf("+");
+						arr=str.split("+");
+						num1=Number(arr[0]);
+						num2=Number(arr[1]);
+						showNum.innerHTML=showNum.innerHTML+"="+(num1+num2);
+					}
+				if(str.indexOf("-")>0){
+						i=str.indexOf("-");
+						arr=str.split("-");
+						num1=Number(arr[0]);
+						num2=Number(arr[1]);
+						showNum.innerHTML=showNum.innerHTML+"="+(num1-num2);
+					}
+				if(str.indexOf("*")>0){
+						i=str.indexOf("*");
+						arr=str.split("*");
+						num1=Number(arr[0]);
+						num2=Number(arr[1]);
+						showNum.innerHTML=showNum.innerHTML+"="+(num1*num2);
+					}
+				if(str.indexOf("%")>0){
+						i=str.indexOf("%");
+						arr=str.split("%");
+						num1=Number(arr[0]);
+						num2=Number(arr[1]);
+						showNum.innerHTML=showNum.innerHTML+"="+(num1%num2);
+					}
+			}
+			//向数组中插入数字
+			//alert(count[1].innerHTML);
+			for(var i=0;i<count.length;i++){
+				count[i].index=i
+				count[i].onclick=function(){
+					showNum.innerHTML+=count[this.index].innerHTML;
+					str+=count[this.index].innerHTML;
+					showNum.style.fontSize="50px";
+					showNum.style.color="black";
+					showNum.style.overflow="hidden";
+					showNum.style.textAlign="right";
+				}
+			}
+			
+			tr1.firstElementChild.onclick=function(){
+				showNum.innerHTML="";
+				str="";
+			}
+			tr1.firstElementChild.nextElementSibling.onclick=function(){
+				str=str.substring(0,str.length-1);
+				showNum.innerHTML=str;
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

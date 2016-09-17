@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1" style="width: 100px;height: 100px;background: red;position: absolute;"></div>
+	<script>
+		var Div=document.getElementById("div1");
+		document.onmousemove=function(e){
+			e=e||window.event;
+			Div.style.top=e.clientY+"px";
+			Div.style.left=e.clientX+"px";
+		}
+	</script>
+	</body>
+</html>

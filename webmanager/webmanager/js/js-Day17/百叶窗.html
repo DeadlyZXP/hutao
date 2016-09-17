@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			#div1 {
+				width: 800px;
+				height: 260px;
+				position: relative;
+				margin: 0 auto;
+				background: #0000FF;
+				overflow: hidden;
+			}
+			
+			ul,
+			li {
+				list-style: none;
+				position: absolute;
+			}
+			
+			ul {
+				top: 0;
+				left: 0;
+			}
+			
+			ul li:nth-child(1) {
+				top: 0;
+				left: 0px;
+			}
+			
+			ul li:nth-child(2) {
+				top: 0;
+				left: 400px;
+			}
+			
+			ul li:nth-child(3) {
+				top: 0;
+				left: 480px;
+			}
+			
+			ul li:nth-child(4) {
+				top: 0;
+				left: 560px;
+			}
+			
+			ul li:nth-child(5) {
+				top: 0;
+				left: 640px;
+			}
+			
+			ul li:nth-child(6) {
+				top: 0;
+				left: 720px;
+			}
+		</style>
+		<script src="js/startMove.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="div1">
+			<ul id="imgul">
+				<li><img src="img/1.jpg" /></li>
+				<li><img src="img/2.jpg" /></li>
+				<li><img src="img/3.jpg" /></li>
+				<li><img src="img/4.jpg" /></li>
+				<li><img src="img/5.jpg" /></li>
+				<li><img src="img/6.jpg" /></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var lis = document.getElementsByTagName("li");
+			for(var i = 1; i < lis.length; i++) {
+				lis[i].index = i;
+				lis[i].leftflag=true;
+				lis[i].onclick = function() {
+					//clearInterval(this.timer)
+					for (var i=1;i<=this.index;i++) {
+						if(lis[i].leftflag) {
+							var target={
+								left:lis[i].offsetLeft-320
+							}
+							startMove(lis[i], target);
+							lis[i].leftflag=false;
+						}
+					}//clearInterval(this.timer)
+				}
+					/*if(this.flag) {
+						var target = {
+							left: this.offsetLeft - 320
+						}
+						startMove(this, target);
+						this.flag=false;
+					}
+					else{
+						var target = {
+							left: this.offsetLeft + 320
+						}
+						startMove(this, target);
+						this.flag=true;
+					}*/
+					
+				lis[i].onmouseout=function(){
+					//clearInterval(this.timer)
+					for (var i=1;i<lis.length;i++) {
+						if(!lis[i].leftflag) {
+							var target={
+								left:400+(i-1)*80
+							}
+							startMove(lis[i], target);
+							lis[i].leftflag=true;
+						}
+					}
+					//clearInterval(this.timer)
+				}
+			}
+		</script>
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

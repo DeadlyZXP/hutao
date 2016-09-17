@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.text{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="text" data-gao="gao123">
+			<span style="color:red ;">123</span>1235
+		</div>
+		<div class="class1"></div>
+		<div class="class1"></div>
+		<div class="class1"></div>
+		<div class="class1"></div>
+		<script>
+			var div=document.getElementById("text");
+			document.write(text.innerHTML);
+			document.write(text.innerText);
+			document.write(text.outerHTML);
+			document.write(div.getAttribute("data-gao"));
+			var dics=document.getElementsByClassName("class1");
+			alert(dics.length);
+		</script>
+	</body>
+</html>

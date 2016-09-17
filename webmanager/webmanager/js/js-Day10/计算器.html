@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			table{
+				width: 398px;
+				height: 498px;
+				margin: 0 auto;
+				border: 1px solid #E1E1E1;
+				border-collapse: collapse;
+			}
+			tr{
+				height: 98px;
+			}
+			td{
+				height:98px;
+				width: 25%;border: 1px solid #E1E1E1;
+				text-align: center;
+				font-size: 40px;
+			}
+		</style>
+		<script src="js/EX.js"></script>
+	</head>
+	<body>
+		<table id="table1">
+			<tr>
+				<td colspan="4" id="TD1"></td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>X</td>
+				<td id="math1">/</td>
+				<td id="math2">*</td>
+			</tr>
+			<tr>
+				<td id="shu7">7</td>
+				<td id="shu8">8</td>
+				<td id="shu9">9</td>
+				<td id="math3">-</td>
+			</tr>
+			<tr>
+				<td id="shu4">4</td>
+				<td id="shu5">5</td>
+				<td id="shu6">6</td>
+				<td id="math4">+</td>
+			</tr>
+			<tr>
+				<td id="shu1">1</td>
+				<td id="shu2">2</td>
+				<td id="shu3">3</td>
+				<td rowspan="2" id="math6">=</td>
+			</tr>
+			<tr>
+				<td id="math5">%</td>
+				<td class="shu0">0</td>
+				<td class="shu">.</td>
+			</tr>
+		</table>
+		<script>
+			var Otable=document.getElementById("table1");
+			var arr=[];
+			var b;
+			Otable.onmousemove=function(event){
+				var Td1=document.getElementById("TD1");
+				event=EX.getEvent(event);
+				event.stopPropagation(event);
+				EX.getTarget(event).onclick=function(){
+					switch(EX.getTarget(event).id){
+					case "shu0":
+					case "shu1":
+					case "shu2":
+					case "shu3":
+					case "shu4":
+					case "shu5":
+					case "shu6":
+					case "shu7":
+					case "shu8":
+					case "shu9":
+						a=Td1.innerHTML+(this.innerHTML);
+						Td1.innerHTML=Td1.innerHTML+(this.innerHTML);
+						break;
+					case "math1":
+					case "math2":
+					case "math3":
+					case "math4":
+					case "math5":
+					case "math6":
+						b=this.innerHTML;
+						Td1.innerHTML=Td1.innerHTML+(this.innerHTML);
+						break;	
+				}	
+				
+//				
+			}
+		}
+			
+		</script>
+	</body>
+</html>

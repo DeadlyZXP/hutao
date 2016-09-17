@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		用户名<input type="text" id="name" /><br />
+		密码<input type="password" id="pass"/><br />
+			<input type="button" value="提交" onclick="getpass()"/><br /><br />
+			
+		金额<input type="text" id="many"  value=""/><br />
+		密码<input type="password" id="pass2"/><br />
+		<input type="button" value="提取" onclick="getmoney()" />
+		<script>
+			function add(a,b){
+				return a+b;
+			}
+//			alert(add(1,2));
+			//减法
+			function sub(a,b){
+				return a-b;
+			}
+//			alert(sub(2,1));
+			//乘法
+			function cf(a,b){
+				return a*b;
+			}
+//			alert(cf(1,2));
+			//除法
+			function cf2(a,b){
+				return a/b;
+			}
+//			alert(cf2(2,1));
+			//取模
+			function qm(a,b){
+				return a%b;
+			}
+//			alert(qm(10,2));
+			//输出等腰三角形
+//			function sj(a){
+//					for (var i=1;i<=a;i++){
+//					for(var j=1;j<i;j++){
+//						document.write("&ensp;");
+//					}
+//					for (var j=1;j<=2*(a-i)+1;j++){
+//						document.write("*");
+//					}
+//				document.write("<br >");
+//				}
+//			}alert(sj(5));
+			//登录
+			var num1=document.getElementById("name");
+			var num2=document.getElementById("pass");
+			function getpass(a,b){
+				var parse1=parseInt(num1.value);
+				var parse2=parseInt(num2.value);
+				if(parse1==parse2){
+					alert("登陆成功");
+				}else{
+					alert("登录失败");
+				}
+			}
+			
+			var num3=document.getElementById("many");
+			var num4=document.getElementById("pass2");
+			function getmoney(a,b){
+				var parse1=parseInt(num3.value);
+				var parse2=parseInt(num4.value);
+				if(parse2==000000&&parse1>0){
+					if(parse1<=3000){
+						alert("取钱成功");
+					}else{
+						alert("钱不够了");
+					}
+				}else if(parse2!=00000&&parse1>0){
+					alert("密码错误");
+				}else if(parse2==00000&&parse1<=0){
+					alert("请输入正确金额");
+				}
+			}
+			//最大公约数
+			var t;
+			var num=true;
+			function fn(x,y){
+				if(x<y){
+					x=t;
+					x=y;
+					y=t;
+				}
+				for(var i=y;y>0;i--){
+					if(x%i==0&&y%i==0){
+						alert(i);
+//		
+						break;
+					}
+				}
+				}
+		
+//			fn(60,24);
+			
+			var t;
+			function fn1(x,y){
+				if(x<y){
+					x=t;
+					x=y;
+					y=t;
+				}
+				if(x%y==0){
+					alert(y);
+			}
+				}fn1(24,12);
+		</script>
+	</body>
+</html>

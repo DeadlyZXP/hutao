@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动轨迹</title>
+    <style>
+        #div1{
+            width: 48px;
+            height: 40px;
+            position: absolute;
+            top:0;
+            left:0;
+            background: url("img/1.gif");
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    var arrDiv=[];
+    var timer;
+    var i=0;
+    document.onmousedown=function(){
+        //event 事件对象 有兼容问题；
+        // 标准的 事件对象是当做实参传递给事件处理程序；
+        // ie，把事件对象赋值给 window.event
+        document.onmousemove=function(event){
+            event=event||window.event; //
+            var top=event.clientY;
+            var left=event.clientX;
+            //创建一个div 就行
+            var oDiv=document.createElement("div");
+            oDiv.style.width="5px";
+            oDiv.style.height="5px";
+            oDiv.style.background="red";
+            oDiv.style.position="absolute";
+            oDiv.style.top=top+"px";
+            oDiv.style.left=left+"px";
+            document.body.appendChild(oDiv);
+            arrDiv.push(oDiv);
+        }
+    }
+    document.onmouseup= function () {
+        //清除mousemove处理函数；
+        document.onmousemove=null;
+        //让小人 动起来；
+        var oDiv=document.getElementById("div1");
+        oDiv.style.background="url('img/2.gif')";
+        clearInterval(timer);
+        timer=setInterval(function(){
+            if(i<arrDiv.length){
+                //定时器每次执行的时候，小人移动一次；
+                oDiv.style.top=arrDiv[i].offsetTop+"px";
+                oDiv.style.left=arrDiv[i].offsetLeft+"px";
+                document.body.removeChild(arrDiv[i]);
+                i++;
+            }else{
+                clearInterval(timer);
+                oDiv.style.background="url('img/1.gif')";
+                arrDiv=[];
+                i=0;
+            }
+        },30);
+    }
+</script>
+</body>
+</html>

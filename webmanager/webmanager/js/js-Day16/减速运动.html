@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>减速运动</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 500px;
+        }
+        #div1{left:100px;
+            background: lightcoral;}
+        #div2{
+            left: 200px;
+            background:lightgreen;
+        }
+    </style>
+    <script src="js/moveUti.js"></script>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <script>
+        var Odiv1=document.getElementById("div1");
+        var Odiv2=document.getElementById("div2");
+        Odiv1.onmouseover=function () {
+            Move(Odiv1,300);
+        }
+        Odiv1.onmouseout=function () {
+            Move(Odiv1,100);
+        }
+        Odiv2.onmouseover=function () {
+            Move(Odiv2,400);
+        }
+        Odiv2.onmouseout=function () {
+            Move(Odiv2,100);
+        }
+        function Move(oDiv,target,fn) {
+            clearInterval(oDiv.timer);
+            oDiv.timer=setInterval(function (){
+                var text=Math.round(parseFloat(getStyle(Odiv1,"height")));
+                var speed=(target-oDiv.offsetHeight)/10;
+//                var speed=(target-oDiv.offsetHeight)/10;
+                if(speed>0){
+                    speed=Math.ceil(speed);
+                }else{
+                    speed=Math.floor(speed);
+                }
+                if(oDiv.offsetHeight==target){
+                    clearInterval(oDiv.timer);
+                    if(fn){
+                        fn();
+                    }
+                }else{
+                    oDiv.style.height=oDiv.offsetHeight+speed+"px";
+                    oDiv.style.top=oDiv.offsetTop-speed+"px";
+                }
+            },30)
+        }
+    </script>
+</body>
+</html>

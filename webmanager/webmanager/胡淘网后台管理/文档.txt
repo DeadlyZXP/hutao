@@ -1,0 +1,1 @@
+公共样式用jquery load 获取

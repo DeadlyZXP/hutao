@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var animals=["dog","cat","seal","walrus","lion","cat","dog"];
+//			animals.splice(3,1);
+//			animals.splice(5,1,"monkey");
+//			alert(animals);
+
+			for(var i=0;i<animals.length;i++){
+				var anim=animals[i].concat();
+//				anim=anim+"s";
+//				alert(anim);
+				animals[i]=anim+"s";
+			}
+//			alert(animals);
+			
+			for(var i=0;i<animals.length-1;i++){
+				var anima=animals[i]
+				var g=1;
+				for(var j=i+1;j<animals.length;j++){
+					if(anima==animals[j]){
+						g++;
+						alert(animals[j]);
+						alert(g);
+						animals.splice(j,1);
+					}	
+				}
+				for(var j=animals.length-1;j>i;j--){
+					if(anima==animals[j]){
+						g++;
+						alert(animals[j]);
+						alert(g);
+						animals.splice(j,1);
+					}	
+				}
+				
+			}
+			alert(animals);
+//			var result=[]; 
+//         	for(var i=0;i<animals.length;i++){
+//				var isEX = false;
+//				for(var j=0;j<result.length;j++){
+//					if(animals[i]==result[j][0]){
+//						isEX=true;
+//						result[j][1]++;
+//					}
+//				}
+//				if(!isEX){
+//					result.push([animals[i],1]);
+//				}
+//			}alert(result);
+				
+		</script>
+	</body>
+</html>

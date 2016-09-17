@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片翻转</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			ul,li{
+				list-style: none;
+			}
+			li{
+           		 width: 400px;
+           		 height: 260px;
+	           	 float: left;
+	           	 list-style: none;
+	           	 overflow: hidden;
+	           	 margin: 10px;
+	           	 position: relative;
+       	 	}
+			#divbox{
+				width: 400px;
+				height: 260px;
+				margin: 0 auto;
+			}
+			#img1{
+				display: block;
+				width: 400px;
+				height: 260px;
+				position: absolute;
+				z-index: 1;
+			}
+			#img2{
+				display: block;
+				width: 400px;
+				height: 0px;
+				position: absolute;
+				top: 130px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="divbox">
+			<img src="img/1.jpg" id="img1"/>
+			<img src="img/2.jpg" id="img2"/>
+		</div>
+		<!--<ul>
+        <li><img id="img1" src="img/1.jpg"/><img id="img2" src="img/2.jpg"/><div id="divbox"></div></li>
+    </ul>-->
+		<script>
+			var Odiv=document.getElementById("divbox");
+			var Img1=document.getElementById("img1");
+			var Img2=document.getElementById("img2");
+			var timer;
+			Odiv.onmouseover=function(){
+					clearInterval(timer);
+					timer=setInterval(function(){
+						if(Img1.offsetHeight>0){
+						Img1.style.height=Img1.offsetHeight-10+"px";
+						Img1.style.top=Img1.offsetTop+5+"px";
+					}else{
+						if(Img2.offsetHeight<260){
+							Img2.style.height=Img2.offsetHeight+10+"px";
+							Img2.style.top=Img2.offsetTop-5+"px";
+						}else{
+							clearInterval(timer);
+						}	
+					}
+				},30)
+			}
+			Odiv.onmouseout=function(){
+					clearInterval(timer);
+					timer=setInterval(function(){
+						if(Img2.offsetHeight>0){
+						Img2.style.height=Img2.offsetHeight-10+"px";
+						Img2.style.top=Img2.offsetTop+5+"px";
+					}else{
+						if(Img1.offsetHeight<260){
+							Img1.style.height=Img1.offsetHeight+10+"px";
+							Img1.style.top=Img1.offsetTop-5+"px";
+						}else{
+							clearInterval(timer);
+						}	
+					}
+				},30)
+			}
+//				if(Img1.offsetHeight+10>260){
+//					clearInterval(timer);
+//				}
+		
+		</script>
+	</body>
+</html>

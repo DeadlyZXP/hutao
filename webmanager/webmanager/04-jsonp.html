@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsonp</title>
+</head>
+<body>
+demo
+<input type="text" id="txt1"/>
+<p id="p1"></p>
+<input type="button" value="获取用户" id="bt1"/>
+<script>
+    var oTxt=document.getElementById("txt1");
+    var oP1=document.getElementById("p1");
+    oTxt.onblur=function(){
+        var scr=document.createElement("script");
+        var nameValue=this.value;
+        scr.src="http://10.9.163.115:8081/user/CheckUserNameGet?username="+nameValue+"&callback=fncheckname";
+        document.body.appendChild(scr);
+        scr.onload=function(){
+            this.parentNode.removeChild(this);
+        }
+     }
+
+    function fncheckname(result){
+        if(result==1){
+            oP1.innerHTML="用户已存在";
+        }else{
+            oP1.innerHTML="可用";
+        }
+    }
+</script>
+</body>
+</html>

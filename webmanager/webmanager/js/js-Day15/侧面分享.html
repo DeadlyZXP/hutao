@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>侧面分享</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			ul,li{
+				list-style: none;
+			}
+			#ul1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 200px;
+				left: -100px;
+				background: lightgrey;
+			}
+			#ul1 li{
+				width: 100px;
+				float: left;
+				text-align: left;
+			}
+			#btn1{
+				width: 40px;
+				height: 60px;
+				position: absolute;
+				top: 220px;
+				left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		<ul id="ul1">
+			<li>腾讯qq</li>
+			<li>新浪微博</li>
+			<li>网易</li>
+		</ul>
+		<input type="button" id="btn1" value="分享" />
+		</div>
+		<script>
+			var Ul=document.getElementById("ul1");
+			var bTn=document.getElementById("btn1");
+			var timer;
+			bTn.onclick=function(){
+				if(bTn.offsetLeft==0){
+					clearInterval(timer);
+					timer=setInterval(function(){
+						if(bTn.offsetLeft+11>=100){
+							clearInterval(timer);
+							bTn.style.left="100px";
+							Ul.style.left="0";
+						}else{
+							bTn.style.left=bTn.offsetLeft+11+"px";
+							Ul.style.left=Ul.offsetLeft+11+"px";
+						}
+					},30)
+				}else if(bTn.offsetLeft==100){
+					clearInterval(timer);
+					timer=setInterval(function(){
+						if(bTn.offsetLeft-11<=0){
+							clearInterval(timer);
+							bTn.style.left="0";
+							Ul.style.left="-100px";
+						}else{
+							bTn.style.left=bTn.offsetLeft-11+"px";
+							Ul.style.left=Ul.offsetLeft-11+"px";
+						}
+					},30)
+				}
+			}
+		</script>
+	</body>
+</html>

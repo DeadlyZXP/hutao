@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 300px;
+				height: 300px;
+				border: 1px solid lightblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<p id="p1">123</p>
+			<p id="p2">456</p>
+			<p id="p3">789</p>
+		</div>
+		<input type="button" id="btn" value="创建" />
+		<input type="text" id="txt" />
+		<input type="button" id="btn1" value="删除" />
+		<input type="button" id="btn2" value="查看" />
+		<input type="button" id="btn3" value="相加" />
+		<script>
+			var Odiv1=document.getElementById("div1");
+			var btn=document.getElementById("btn");
+			var btn1=document.getElementById("btn1");
+			var txt=document.getElementById("txt");
+			var btn2=document.getElementById("btn2");
+			var btn3=document.getElementById("btn3");
+			btn.onclick=function(){
+				var Odiv2=document.createElement("div");
+				Odiv1.appendChild(Odiv2);
+				Odiv2.style.width="100px";
+				Odiv2.style.height="100px";
+				Odiv2.style.background="red";
+				Odiv2.innerHTML="22";
+			}
+			btn1.onclick=function(){
+				var pp=document.getElementsByTagName("p");
+				var txt1=txt.value;
+				Odiv1.removeChild(pp[txt1]);
+//				Odiv1.removeChild(pp[0]);
+			}
+			btn2.onclick=function(){
+				var pp=document.getElementsByTagName("p");
+				var txt1=txt.value;
+				alert(pp[txt1].id);
+			}
+			btn3.onclick=function(){
+				var dd=Odiv1.children;
+				var sum=0;
+				for(var i=0;i<dd.length;i++){
+					var ss=parseInt(dd[i].innerHTML);
+					sum+=ss;
+				}
+				alert(sum);
+			}
+		</script>
+	</body>
+</html>

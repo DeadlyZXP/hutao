@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		请输入数字<input type="text" id="txt" /><br />
+		<input type="button" id="btn" value="生成条形码" />
+		<script>
+			var Txt=document.getElementById("txt");
+			var Btn=document.getElementById("btn");
+			Btn.onclick=function(){
+				var num=Txt.value;
+				var sum=0;
+				var sum1=0;
+				for(var i=0;i<num.length;i++){
+					if(i%2==0){
+						sum+=Number(num[i]);
+					}else{
+						sum1+=Number(num[i]);
+					}
+				}
+				var sum2=sum+sum1*3;
+				var sum3=sum2%10;
+				if(sum3==0){
+					alert(num.concat(0));
+				}else{
+					var sum4=10-sum3;
+					alert(num.concat(sum4));
+				}
+				
+			}
+			
+			
+		</script>
+	</body>
+</html>

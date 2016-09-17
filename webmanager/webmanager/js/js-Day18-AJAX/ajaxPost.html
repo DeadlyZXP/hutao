@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="Name" />
+		<input type="text" id="Password" />
+		<input type="button" id="btn1" value="申请"/>
+		<script>
+			var TxtName=document.getElementById("Name");
+			var TxtPass=document.getElementById("Password");
+			var Btn=document.getElementById("btn1");
+			Btn.onclick=function(){
+				var xhr;
+				if(window.XMLHttpRequest){
+					xhr=new XMLHttpRequest()
+				}else{
+					xhr=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xhr.open();
+			}
+		</script>
+	</body>
+</html>

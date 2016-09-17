@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.div{
+				width: 300px;
+				height: 300px;
+				border: 1px solid lightcoral;
+				margin: 0 auto;
+			}
+			.day{
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div">
+		<p id="day">系统当前时间为<span id="span1"></span></p>
+		<p id="day2">当前页面已停留时间<span id="span2"></p>
+		请输入字符<input type="text" id="txt"/><input type="button" id="btn" value="执行" />
+		<p id="day3">您输入的字符是<span id="span3"></span>它的ASCII码是<span id="span4"></span></p>
+		</div>
+		<script>
+			var s=new Date();
+			var day=document.getElementById("day");
+			var day2=document.getElementById("day2");
+			var span1=document.getElementById("span1");
+			var span2=document.getElementById("span2");
+			var span3=document.getElementById("span3");
+			var span4=document.getElementById("span4");
+			function show(){
+				var s=new Date();
+				var min=s.getMinutes();
+				var sec=s.getSeconds();
+				if(min<10){
+					min="0"+min;
+				}
+				if(sec<10){
+					sec="0"+sec;
+				}
+				span1.innerHTML=":"+s.getFullYear()+"-"+s.getMonth()+"-"+s.getDate()+" "+s.getHours()+":"+min+":"+sec;
+			}
+			setInterval(show,1000);
+			var j=0;
+			var h=0;
+			var i=0;
+			function show2(){
+				span2.innerHTML=":"+h+"小时"+j+"分"+i+"秒";
+				i+=1;
+				if(i==60){
+					i=0;
+					j+=1;
+				}
+				if(j==60){
+					j=0;
+					h+=1;
+				}
+			}
+			setInterval(show2,1000);
+			
+			var txt=document.getElementById("txt");
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){
+				var a=txt.value;
+//				alert(a);
+				span3.innerHTML=a;
+				span4.innerHTML=a.charCodeAt();
+			}
+		</script>
+	</body>
+</html>

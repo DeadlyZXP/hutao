@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		输入行  <input type="text" id="tr1" />
+		输入列  <input type="text" id="td1" />
+		<input type="button" id="btn" value="创建" />
+		<div id="div"></div>
+		<script>
+			var Tr=document.getElementById("tr1");
+			var Td=document.getElementById("td1");
+			var Btn=document.getElementById("btn");
+			var Body=document.getElementsByTagName("body")[0];
+			var table=document.createElement("table");
+			var Div=document.getElementById("div");
+			Btn.onclick=function(){
+				var Trr=Tr.value;
+				var Tdd=Td.value;
+				table.innerHTML="";//var table放在外面  放在function里 table.innerHTML="";
+	            Div.appendChild(table);
+	            table.style.border="1px solid #ccc";
+	            table.style.width="100%";
+	            table.style.tableLayout="fixed";
+	            for(var i=0;i<Trr;i++){
+	            	var tr=document.createElement("tr");
+	            	table.appendChild(tr);
+	            	tr.style.height="30px";
+	            	for(var j=0;j<Tdd;j++){
+	            		var color1=parseInt(Math.random()*256);
+	            		var color2=parseInt(Math.random()*256);
+	            		var color3=parseInt(Math.random()*256);
+	            		var td=document.createElement("td");
+	            		tr.appendChild(td);
+//	            		td.index=i;
+						if(j==Tdd-1){
+							td.innerHTML="添加一行";
+							td.onclick=function(){
+								var tr1=document.createElement("tr");
+								var td1=document.createElement("td");
+								var tds=this.parentNode.cloneNode(true);
+								this.parentNode.parentNode.insertBefore(tds,this.parentNode.nextElementSibling);
+//								this.parentNode.parentNode.insertBefore(tr1,this.parentNode.nextElementSibling);
+//								tr1.style.height="30px";
+//								for(var l=0;l<Tdd;l++){
+//									tr1.appendChild(td1);
+//									tr1.innerHTML="新的行";
+//								}
+							}
+						}else if(j==Tdd-2){
+	            			td.innerHTML="删除";
+	            			td.onclick=function(){
+//	            				var sub=this.index;
+//	            				var trr1=document.getElementsByTagName("tr");
+//	            				table.removeChild(trr1[sub]);
+								this.parentNode.parentNode.removeChild(this.parentNode);
+	            			}                
+	            		}else if(j==Tdd-3){
+	            			td.innerHTML="清空";
+	            			
+	            			td.onclick=function(){
+	            				var tdd=this.parentNode.children;
+//	            				alert(tdd.length);
+	            				for(var k=0;k<Tdd-2;k++){
+	            					tdd[k].innerHTML="";
+	            				}
+	            			}
+	            		}
+	            		else{
+	            			td.innerHTML="行号"+i+"列号"+j;
+	            		}
+	           						td.style.backgroundColor="rgb("+color1+","+color2+","+color3+")";
+	            		
+	            	}
+	            }
+			}
+		</script>
+	</body>
+</html>

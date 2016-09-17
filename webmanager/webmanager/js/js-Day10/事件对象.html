@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+		</style>
+	</head>
+	<body>
+		<script>
+			document.onmousedown=function(event){
+				var Odiv=document.createElement("div");
+				Odiv.style.width="100px";
+				Odiv.style.height ="100px";
+				Odiv.style.background="red";
+				Odiv.style.position="absolute";
+				Odiv.style.top=event.clientY+"px";
+				Odiv.style.left=event.clientX+"px";
+				document.body.appendChild(Odiv);
+				alert(event.target.nodeName);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#divbox{
+				width: 1100px;
+				height: 400px;
+				margin: 0 auto;
+			}
+			#divbox2{
+				width: 1000px;
+				height: 400px;
+				margin: 0 auto;
+			}
+			#divbox2 h1{
+				font-size: 16px;
+				color: red;
+			}
+			#divbox3{
+				border-top: 4px solid #eee;
+			}
+			.list{
+				width: 250px;
+				float: left;
+				height: 40px;
+				background: #E3E3E3;
+				line-height: 40px;
+			}
+			#divbox ul li{
+				width: 220px;
+				height: 400px;
+				float: left;
+				margin-left: 2px;
+				padding: 0 15px 0 15px;
+				border: 1px solid #eee;
+			}
+			ul li{
+				list-style: none;
+			}
+			ul li em{
+				color: red;
+				font-size: 22px;
+				font-weight: 600;
+			}
+			ul li a{
+				display: block;
+				width: 160px;
+				height: 40px;
+				border: 1px solid #eee;
+				text-align: center;
+				line-height: 40px;
+				margin: 0 auto;
+				text-decoration: none;
+				color: red;
+			}
+			ul li a:hover{
+				border: 1px solid red;
+			}
+		</style>
+		<script src="js/Cookie.js"></script>
+	</head>
+	<body>
+		<div id="divbox">
+			<ul id="ul1">
+				<li>
+					<span><img src="img/1.jpg"/></span>
+					<em>&yen;2999</em>
+					<p>乐视超级电视 S50</p>
+					<a href="#">加入购物车</a>
+				</li>
+				<li>
+					<span><img src="img/2.jpg"/></span>
+					<em>&yen;3999</em>
+					<p>乐视超级电视 S60</p>
+					<a href="#">加入购物车</a>
+				</li>
+				<li>
+					<span><img src="img/3.jpg"/></span>
+					<em>&yen;4999</em>
+					<p>乐视超级电视 S70</p>
+					<a href="#">加入购物车</a>
+				</li>
+				<li>
+					<span><img src="img/4.jpg"/></span>
+					<em>&yen;5999</em>
+					<p>乐视超级电视 S80</p>
+					<a href="#">加入购物车</a>
+				</li>
+			</ul>
+		</div>
+		<div id="divbox2">
+			<h1>全部商品</h1>
+			<div id="divbox3">
+				<p id="mathlist">0</p>
+				<div class="list">商品名称</div>
+				<div class="list">价格</div>
+				<div class="list">数量</div>
+				<div class="list">操作</div>
+			</div>
+			<div id="divbox4">
+				
+			</div>
+		</div>
+		
+		<script>
+			var Ul=document.getElementById("ul1");
+			var Lilist=Ul.children;
+			for(var i=0;i<Lilist.length;i++){
+				Lilist[i].onclick=function(){
+				var Information=new Object();
+				Information.img=this.children[0].innerHTML;//img地址
+				Information.pirce=this.children[1].innerHTML.substr(1);//价格
+				Information.name=this.children[2].innerHTML;
+				Information.list=1;
+				
+			}
+			function SetCookie(){
+				var Oldcookie=Cookie.Getcookie("InforC");
+				var Newcookie;
+				var Inforc=Information.img+"&&"+Information.pirce+"&&"+Information.name;
+				if(Oldcookie&&Oldcookie.length>9){
+						Newcookie=Oldcookie+"||"+Inforc;
+					}else{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+						Newcookie=Inforc;
+					}
+			}
+		</script>
+	</body>
+</html>                                                                                                                                           

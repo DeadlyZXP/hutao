@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text"/>
+		<input type="button" id="btn" value="点击获取验证码"/>
+		<script>
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){
+				var Btn=btn.value;
+				var i=11;
+				var show=function(){
+					if(i==1){
+						clearInterval(time);
+						btn.value="点击获取验证码";
+						btn.disabled=false;
+					}else{
+						i--;
+					btn.value=i+"秒后重新获取验证码";
+					btn.disabled="disabled";
+					}
+					
+				}
+				var time=setInterval(show,1000);
+			}
+		</script>
+	</body>
+</html>
+ 

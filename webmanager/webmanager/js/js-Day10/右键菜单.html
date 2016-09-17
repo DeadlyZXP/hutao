@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>右键菜单</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			ul,li{list-style: none;}
+		</style>
+	</head>
+	<body>
+		<ul id="ul1" style="width:100px; height:300px;border: 1px solid #eee;display: none;"></ul>
+		<script>
+			var Ul=document.getElementById("ul1");
+			Ul.style.position="absolute";
+			document.oncontextmenu=function(e){
+				e=e||window.event
+				Ul.style.display="block";
+				Ul.style.top=e.clientY+"px";
+				Ul.style.left=e.clientX+"px";
+				if(e.stopPropagation){
+					e.stopPropagation();
+				}else{
+					e.cancelBubble=true;
+				}
+				return false;
+			}
+			document.onclick=function(e){
+				Ul.style.display="none";
+			}
+			Ul.onclick=function(e){
+				e=e||window.event
+				if(e.stopPropagation){
+					e.stopPropagation();
+				}else{
+					e.cancelBubble=true;
+				}
+				return false;
+			}
+		</script>
+	</body>
+</html>

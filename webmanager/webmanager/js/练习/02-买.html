@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for(var i=1;i<20;i++){
+        for(var j=1;j<33;j++){
+            for(var k=3;k<100;k=k+3){
+                if(i+j+k==100&&5*i+3*j+k/3==100){
+                    document.write(i+" "+j+" "+k);
+                    document.write("<br/>");
+                }
+            }
+        }
+    }
+    var sum=0;
+    for(var i=1;i<=100;i++){
+        if(i%2==0){
+            sum-=1/i;
+        }else{
+            sum+=1/i;
+        }
+    }
+    document.write(sum);
+    var sum=0;
+    var flag=1;
+    for(var i=1;i<=100;i++){
+        sum=sum+(1/i)*flag;
+        flag=flag*(-1);
+    }
+    document.write(sum);
+</script>
+</body>
+</html>

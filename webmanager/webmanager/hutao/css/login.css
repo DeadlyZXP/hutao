@@ -1,0 +1,302 @@
+/*登录界面 登录栏开始*/
+.login-center{
+    margin :50px 0 ;
+}
+.login-box{
+    width: 1218px;
+    height: 407px;
+    position: relative;
+    margin: 0 auto;
+    /*background: red;*/
+    border-top: 1px solid #6f6f6f;
+}
+.login-p{
+    z-index: 200;
+    width: 104px;
+    height: 54px;
+    position: absolute;
+    top: -27px;
+    left: 557px;
+    font-size: 26px;
+    text-align: center;
+    background: white;
+    color: #666;
+    line-height: 54px;
+}
+.login-left{
+    width: 608px;
+    height: 407px;
+    float: left;
+    border-right:1px solid #6f6f6f ;
+    position: relative;
+}
+.login-right{
+    width: 609px;
+    height: 407px;
+    float: right;
+    position: relative;
+}
+.login-leftimg-box{
+    position: absolute;
+    width: 338px;
+    height: 338px;
+    margin: auto;
+    left: 0;top: 70px;right: 0;bottom: 0;
+}
+.login-leftimg-box img{
+    width: 338px;
+    height: 338px;
+}
+.login{
+    width: 420px;
+    height: 338px;
+    position: absolute;
+    margin: auto;
+    left: 0;top: 70px;right: 0;bottom: 0;
+}
+.login-ways{
+    width: 420px;
+    height: 30px;
+}
+.login-ways a,span{
+    float: right;
+    font-size: 14px;
+}
+.login-ways a {
+    color: red;
+}
+.login-ways span{
+    margin-right: 10px;
+}
+.login-in{
+    width: 420px;
+    height: 278px;
+    /*background: red ;*/
+}
+.login-in2{
+    width: 420px;
+    height: 278px;
+    /*background: red ;*/
+}
+.login-in input{
+    padding-left: 10px;
+}
+.loginphone{
+    width: 406px;
+    height: 34px;
+}
+.loginpassword{
+     width: 406px;
+     height: 34px;
+     margin-top: 30px;
+ }
+.login-tel{
+    width: 420px;
+    height: 40px;
+    margin-top: 30px;
+}
+.login-tel input{
+    width: 240px;
+    height: 34px;
+    float: left;
+}
+.login-tel a{
+    color: white;
+    float: left;
+    display: block;
+    width: 166px;
+    height: 40px;
+    background: #e51755;
+    text-align: center;
+    line-height: 40px;
+}
+.login-tel a :hover{
+    cursor: pointer;
+}
+.logbox{
+    width: 420px;
+    height: 30px;
+    margin-top: 40px;
+}
+.logbox a{
+    float: left;
+    margin-left: 30px
+}
+.loginMath{
+    width: 160px;
+    height: 30px;
+    float: left;
+    background: #f3f3f3;
+    border: none;
+}
+.logMath{
+    width: 66px;
+    height: 24px;
+    margin-left: 10px;
+    float: left;
+}
+.logintruduce{
+    width: 420px;
+    height: 30px;
+    margin-top: 20px;
+}
+.logintruduce div{
+    float: left;
+}
+.logintruduce span{
+    width: 180px;
+    float: left;
+    margin-left: 20px;
+    font-size: 12px;
+}
+.logintruduce a{
+    float: right;
+    color:red;
+}
+.login-btn{
+    margin-top: 20px;
+    width: 420px;
+    height: 40px;
+    background: #E51755;
+    color:white;
+    text-align: center;
+    line-height: 40px;
+    border: none;
+}
+.login-otherway{
+    width: 420px;
+    display: block;
+    height: 16px;
+    margin-top: 10px;
+}
+.login-weibo{
+    float:left;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+}
+/*登录栏结束*/
+/*注册栏开始*/
+.resgister-top{
+    width: 420px;
+    height: 40px;
+}
+.resgister-top-box{
+    width: 288px;
+    height: 38px;
+    border:1px solid #666; 
+    float: left;
+}
+.resgister-top select{
+    padding-left: 10px;
+    width: 130px;
+    height: 40px;
+    float: left;
+}
+.resgister-tel{
+    width: 166px;
+    height: 34px;
+    float: left;
+    border: none;
+}
+.resgister-top-bottom{
+    border: none;
+    width: 110px;
+    height: 34px;
+    color: red;
+    float:right;
+    /*display: none;*/
+}
+.resgister-second{
+    width: 420px;
+    height: 40px;
+    margin-top: 30px;
+}
+.resgister-phobox{
+    width: 258px;
+    height: 38px;
+    border:1px solid #6f6f6f;
+    float: left;
+}
+.resgister-second input{
+    width: 230px;
+    height: 34px;
+    display: block;
+    float: left;
+    border: none;
+}
+.resgister-phobox div{
+    width: 14px;
+    height: 38px;
+    float: left;
+    display: none;
+}
+.resgister-phobox div img{
+    margin-top: 10px;
+}
+.resgister-second a{
+    display: block;
+    width: 160px;
+    height: 40px;
+    background: #e51755;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    float: right;
+}
+.resgister-third{
+    width: 406px;
+    height: 34px;
+    margin-top: 30px;
+}
+/*#resgister-third-bottom{
+     display: block;
+    border: none;
+    width: 400px;
+    height: 18px;
+    color: red;
+}*/
+.resgister-forth{
+    width: 406px;
+    height: 34px;
+    margin-top: 30px;
+}
+#resgister-forth-bottom{
+    float: left;
+    border: none;
+    width: 410px;
+    height: 18px;
+    color: red;
+}
+.resgister-fith{
+    width: 420px;height: 30px;margin-top: 10px;
+}
+.resgister-fith input{
+    float: left;
+    margin-top: 6px;
+}
+.resgister-fith span{
+    float: left;
+}
+.resgister-fith span b{
+    color: red;
+}
+.resgister-sixth{
+    display: block;
+    width: 420px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    background: #e51755;
+    text-align: center;
+    margin-top: 20px;
+}
+.resgister-bottom{
+    margin-top: 4px;
+    display: block;
+    width: 120px;height: 16px;
+    float: right;
+    text-align: center;
+    color: #e51755;
+}
+/**/

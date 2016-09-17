@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+		<script>
+		document.onmousedown=function(event){
+			if(document.implementation.hasFeature("MouseEvent","2.0")){
+//					e=e||window.event;
+//					if(e.stopPropagation){
+//					e.stopPropagation();
+//				}else{
+//					e.cancelBubble=true;
+//				}
+//				return false;
+				alert(event.button);
+			}else{
+				var i=event.button;
+//				alert(event.button);
+				switch(i){
+					case 0:
+					case 1:
+					case 3:
+					case 5:
+					case 7:alert(0);
+					break;
+					case 2:
+					case 6:alert(2);
+					break;
+					case 4:alert(1);
+					break;
+				}
+			}
+		}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="top">
+		<input type="button" value="正序排序" onclick="zhengxu()"/><br />
+		<input type="button" value="倒序排序" onclick="daoxu()" /><br />
+		</div>
+		<script>
+			var arr1=[1,4,65,3,55]; 
+			var arr=[1,2,3,4,5,6,7,8];
+			arr.filter(function(item,index,arr){
+				document.write(item+"---"+index+"---"+arr+"---"+this);
+				document.write("<br />");
+			},arr1)
+			//this 指代arr1
+			document.write(arr.indexOf(2));
+			document.write("<br />");
+			arr1.sort();
+			document.write(arr1);
+			document.write("<br />");
+			arr1.sort(s);
+			function s(a,b){
+				return b-a;
+			}
+			document.write(arr1);
+			document.write("<br />");
+			var arr2=[[1,5,2,9,8],[45,6,8],[5,6,9,7,4,5]];
+//			arr2.sort(function(a,b){
+//				return a.length-b.length;
+//			})
+//			document.write(arr2);
+			document.write("<br />");
+			arr2.sort(function(a,b){
+//				var sum1=0;
+//				var sum2=0;
+//				for(var i=0;i<a.length;i++){
+//					sum1+=a[i];
+//				}
+//				for(var i=0;i<b.length;i++){
+//					sum2+=b[i];
+//				}
+//				return sum2-sum1;
+				var aMax=Math.max.apply(this,a);
+				var bMax=Math.max.apply(this,b);
+				return aMax-bMax;
+			});
+			document.write(arr2);
+			var arr3=[3,5,7,6,2];
+			function zhengxu(){
+				arr3.sort();
+				document.write(arr3);
+				
+			}
+			function daoxu(){
+				arr3.sort(function(a,b){
+					return b-a;
+				});
+				document.write(arr3);
+			}
+			
+			var arr4=["yellow","red"];
+			var arr5=["yes","no",true,false]
+			arr4.push("green");
+			arr5.splice(1,1,"ok",22);
+			alert(arr5);
+			var result=arr4.concat(arr5);
+//			alert(result);
+			function Shift(a){
+				var t=a[0];
+				for(var i=0;i<a.length;i++){
+					
+					a[i]=a[i+1];
+				}
+				alert(t);  
+			}
+			Shift(arr5);
+			alert(arr5);
+			var arr6=[6,5,2,7,9,10,3,9];
+			for(var i=0;i<arr6.length-1;i++){
+				for(var j=0;j<arr6.length-1-i;j++){
+					if(arr6[j]>arr6[j+1]){
+						var t=arr6[j];
+						arr6[j]=arr6[j+1];
+						arr6[j+1]=t;
+					}
+				}
+			}
+//			alert(arr6);
+			function Shift(a){
+				var t=a[0];
+				for(var i=0;i<a.length;i++){
+					
+					a[i]=a[i+1];
+				}
+				alert(4);  
+			}
+		</script>
+	</body>
+</html>

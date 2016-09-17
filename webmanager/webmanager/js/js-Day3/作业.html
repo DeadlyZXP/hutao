@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arr=[3,5,2,4,6,8];
+			var arr1=[7,9,1,0,15];
+//			for(var i=0;i<arr.length;i++){
+//				var arrmin=arr[i];
+//				var t;
+//				var a=i;
+//				for(var j=0;j<arr.length;j++){
+//					if(arr[j]<arrmin){
+//						min=arr[j];
+//						a=j;
+//					}
+//				}
+//				arr[i]=t;
+//				arr[i]=arrmin;
+//				arr[a]=t;
+//			}
+//			alert(arr);
+			
+			
+			for(var i=0;i<arr.length;i++){
+				var temp=arr[i];
+				var flag=i;
+				for(var j=i+1;j<arr.length;j++){
+					if(temp>arr[j]){
+						temp=arr[j];
+						flag=j;
+					}
+				}
+				var temp=arr[i];
+				arr[i]=arr[flag];
+				arr[flag]=temp;
+			}
+//			alert(arr);
+			function Shift(a){
+				var t=a[0];
+				for(var i=0;i<a.length;i++){
+					
+					a[i]=a[i+1];
+				}
+
+			}
+//			Shift(arr);
+//			alert(arr);
+			function Unshift(a){
+				for(var i=a.length;i>=0;i--){
+					a[i]=a[i-1];
+				}
+				a[0]=1;
+			}
+//			Unshift(arr);
+//			alert(arr);
+			function Push(a){
+				a[a.length]=9;
+			}
+//			Push(arr);
+//			alert(arr);
+			function Pop(a){
+				a[a.length-1]=null;
+			}
+//			Pop(arr);
+//			alert(arr);
+
+		</script>
+	</body>
+</html>

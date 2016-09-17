@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 800px;
+            height: 400px;
+            margin: 5px auto;
+        }
+        li{
+            width: 400px;
+            height: 260px;
+            float: left;
+            list-style: none;
+            overflow: hidden;
+            margin: 10px;
+            position: relative;
+        }
+        #img1{
+            width: 400px;
+            height: 260px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #img2{
+            width: 400px;
+            height: 0px;
+            position: absolute;
+            top: 130px;
+            left: 0;
+        }
+        #div1{
+            width: 400px;
+            height: 260px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        span{
+            width: 400px;
+            height: 0px;
+            background: gold;
+            display: none;
+            position: absolute;
+            top: 130px;
+            left: 0;
+        }
+    </style>
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="js/jquery-2.1.0.js"></script>
+</head>
+<body>
+<div>
+    <ul>
+        <li><img id="img1" src="img/1.jpg"/><img id="img2" src="img/2.jpg"/><div id="div1"></div></li>
+    </ul>
+</div>
+<script>
+    var oDiv=document.getElementById("div1");
+    var oImg1=document.getElementById("img1");
+    var oImg2=document.getElementById("img2");
+
+    var timer;
+    oDiv.onmouseover=function(){
+        clearInterval(timer);
+        timer=setInterval(function(){
+            //让第一张图片变小
+            if(oImg1.offsetHeight<=0){
+                //让第二张图片变大；
+                if(oImg2.offsetHeight>=260){
+                    clearInterval(timer);
+                }else{
+                    oImg2.style.height=oImg2.offsetHeight+10+"px";
+                    oImg2.style.top=oImg2.offsetTop-5+"px";
+                }
+            }else{
+                oImg1.style.height=oImg1.offsetHeight-10+"px";
+                oImg1.style.top=oImg1.offsetTop+5+"px";
+            }
+        },30);
+    }
+    oDiv.onmouseout=function(){
+        clearInterval(timer);
+        timer=setInterval(function(){
+            //让第一张图片变小
+            if(oImg2.offsetHeight<=0){
+                //让第二张图片变大；
+                if(oImg1.offsetHeight>=260){
+                    clearInterval(timer);
+                }else{
+                    oImg1.style.height=oImg1.offsetHeight+10+"px";
+                    oImg1.style.top=oImg1.offsetTop-5+"px";
+                }
+            }else{
+                oImg2.style.height=oImg2.offsetHeight-10+"px";
+                oImg2.style.top=oImg2.offsetTop+5+"px";
+            }
+        },30);
+    }
+
+    /*var timer1;
+    oDiv.onmouseover=function(){
+        document.title="on";
+        clearInterval(timer1);
+        var flag=true;
+        timer1=setInterval(function(){
+            if(oImg1.offsetHeight>0&&flag){
+                oImg1.style.height=oImg1.offsetHeight-10+"px";
+                oImg1.style.top=oImg1.offsetTop+5+"px";
+            }else{
+                flag=false;
+                if(oImg2.offsetHeight<260){
+                    oImg2.style.height=oImg2.offsetHeight+10+"px";
+                    oImg2.style.top=oImg2.offsetTop-5+"px";
+                }else{
+                    clearInterval(timer1);
+                }
+            }
+        },30);
+    }
+    oDiv.onmouseout=function(){
+        clearInterval(timer1);
+        var flag=true;
+        timer1=setInterval(function(){
+            if(oImg2.offsetHeight>0&&flag){
+                oImg2.style.height=oImg2.offsetHeight-10+"px";
+                oImg2.style.top=oImg2.offsetTop+5+"px";
+            }else{
+                flag=false;
+                if(oImg1.offsetHeight<260){
+                    oImg1.style.height=oImg1.offsetHeight+10+"px";
+                    oImg1.style.top=oImg1.offsetTop-5+"px";
+                }else{
+                    clearInterval(timer1);
+                }
+            }
+        },30);
+    }*/
+</script>
+</body>
+</html>

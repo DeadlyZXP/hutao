@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异步同步获取</title>
+</head>
+<body>
+    <div id="div1">123</div>
+    <div id="div2">456</div>
+    <input type="text" value="122"/><br>
+    <input type="button" value="同步获取" id="btn1"/>
+    <input type="button" value="异步获取" id="btn2"/>
+    <input type="button" value="封装异步获取" id="btn3"/>
+    <input type="button" value="封装同步获取" id="btn4"/>
+<script>
+    var Btn1=document.getElementById("btn1");
+//    同步获取
+    Btn1.onclick=function () {
+        var xhr;
+        if(window.XMLHttpRequest){
+            xhr=new XMLHttpRequest();
+        }else{
+            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open("get","data/user.txt",false);
+        xhr.send();
+        var Odiv=document.getElementById("div1");
+        if(xhr.status==200){
+            Odiv.innerHTML=xhr.responseText;
+        }else{
+            Odiv.innerHTML="获取失败";
+        }
+    }
+//    异步获取
+    var Btn2=document.getElementById("btn2");
+    Btn2.onclick=function () {
+        var xhr;
+        if(window.XMLHttpRequest){
+            xhr=new XMLHttpRequest();
+        }else{
+            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open("get","data/user.txt",true);
+        xhr.onreadystatechange=function () {
+            if(xhr.readyState==4){
+                var Odiv1=document.getElementById("div2");
+                if(xhr.status==200){
+                    Odiv1.innerHTML=xhr.responseText;
+                }else{
+                    Odiv1.innerHTML="获取失败";
+                }
+            }
+        }
+        xhr.send();
+    }
+//    封装异步获取
+    var Btn3=document.getElementById("btn3")
+    Btn3.onclick=function () {
+        var Odiv1=document.getElementById("div2");
+        Ajax("get","data/user.txt",true,Odiv1);
+    }
+//    封装同步获取
+    var Btn4=document.getElementById("btn4")
+    Btn4.onclick=function () {
+        var Odiv=document.getElementById("div1");
+        Ajax("get","data/user.txt",false,Odiv);
+    }
+
+
+//    封装
+    function Ajax(method, url, type,ele) {
+        var xhr;
+        if(window.XMLHttpRequest){
+            xhr=new XMLHttpRequest();
+        }else{
+            xhr=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhr.open(method,url,type);
+        xhr.onreadystatechange=function () {
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    ele.innerHTML=xhr.responseText;
+                }else{
+                    ele.innerHTML="获取失败";
+                }
+            }
+        }
+        xhr.send();
+    }
+</script>
+</body>
+</html>

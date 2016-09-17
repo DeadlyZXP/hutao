@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>导航效果</title>
+		<style>
+			*{padding: 0;margin: 0;}
+			ul,li{list-style: none;}
+			#divbox{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 20px;
+				left: 300px;
+				background: #B8B8B8;
+				 
+				display: none;
+			}
+			#div1{
+				display: none;
+			}
+			#div2{
+				display: none;
+			}
+			#ul1{
+				width: 100px;
+				height: 40px;
+				position: relative;
+				top: 20px;
+				left: 200px;
+				background: lightcyan;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>导航1</li>
+			<li>导航2</li>
+		</ul>
+		<div id="divbox">
+			<div id="div1">导航1</div>
+			<div id="div2">导航2</div>
+		</div>
+		<script>
+			var Ul=document.getElementById("ul1");
+			var Lilist=Ul.children;
+			var Odiv=document.getElementById("divbox");
+			var Odivlist=Odiv.children;
+			
+			for(var i=0;i<Lilist.length;i++){
+				Lilist[i].index=i;
+				Lilist[i].onmouseover=function(){
+					for(var j=0;j<Odivlist.length;j++){
+						Odivlist[j].style.display="none";
+					}//防止一二都出来
+					clearTimeout(timer);
+					Odivlist[this.index].style.display="block";
+					Odiv.style.display="block";
+				}
+			}
+			var timer;
+			Ul.onmouseout=function(){
+				timer=setTimeout(function(){
+					Odiv.style.display="none";
+				},300);
+			}
+			for(var j=0;j<Odivlist.length;j++){
+				Odivlist[j].onmouseover=function(){
+					clearTimeout(timer);
+					this.style.display="block";
+					Odiv.style.display="block";
+				}
+				Odivlist[j].onmouseout=function(){
+					this.style.display="none";
+					Odiv.style.display="none";
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/Cookie.js"></script>
+		<script src="js/cookieUtil.js"></script>
+	</head>
+	<body>
+		<input type="text" id="name" /><br />
+		<input type="password" id="password" /><br />
+		<input type="button" id="btn1" value="注册" />
+		<input type="button" id="btn2" value="登录" />
+		<script>
+			var Name=document.getElementById("name");
+			var Pass=document.getElementById("password");
+			var Btn1=document.getElementById("btn1");
+			var Btn2=document.getElementById("btn2");
+			var brr="0";
+			Btn1.onclick=function(){
+				var userName=Name.value;
+				var passWord=Pass.value;
+//				var user=userName+"&"+passWord;
+				SetCookie(userName,passWord);
+			}
+			Btn2.onclick=function(){
+				var userName=Name.value;
+				var passWord=Pass.value;
+				var pass=GetPassword(userName);
+				if(pass){
+					if(pass==passWord){
+						alert("登陆成功");
+					}else{
+						alert("密码不正确");
+					}
+				}else{
+					alert("用户名不正确");
+				}
+			}
+			//注册新用户
+			function SetCookie(userName,passWord){
+				if(!GetPassword){
+					var Oldcookie=Cookie.Getcookie("User");
+					var Newcookie;
+					if(Oldcookie){
+						Newcookie=Oldcookie+"||"+userName+"&"+passWord;;
+					}else{
+						Newcookie=userName+"&"+passWord;;
+					}
+					Cookie.Setcookie("User",Newcookie,30);
+				}else{
+					alert("用户名已存在");
+				}
+			}
+			//根据用户名获取密码
+			function GetPassword(userName){
+				var Password;
+				var CookieWord=Cookie.Getcookie("User");
+				var arrCookie=CookieWord.split("||");
+				for(var i=0;i<arrCookie.length;i++){
+					var item=arrCookie[i].split("&");
+					if(item[0]==userName){
+						Password=item[1];
+					}
+				}
+				return Password;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax json</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="pName"></p>
+        <p id="pAge"></p>
+        <p id="pImg"></p>
+    </div>
+    <input type="button" id="btn1" value="获取数据"/>
+    <input type="button" id="btn2" value="获取数据2"/>
+    <script>
+        var Btn1=document.getElementById("btn1");
+        Btn1.onclick=function () {
+            var xhr;
+            if(window.XMLHttpRequest){
+                xhr=new XMLHttpRequest();
+            }else{
+                xhr=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhr.open("get","data/package.json",true);
+            xhr.onreadystatechange=function () {
+                if(xhr.readyState==4){
+                    var Odiv=document.getElementById("div1");
+                    if(xhr.status=2){
+                        var STr=xhr.responseText;
+//                        alert(STr)
+                        var JSTr=JSON.parse(STr);//package.json中存的是string类型
+                        var Pname=document.getElementById("pName");
+                        Pname.innerHTML=JSTr.name;
+                        var Page=document.getElementById("pAge");
+                        Page.innerHTML=JSTr.age;
+                        var Pimg=document.getElementById("pImg");
+                        var Img=document.createElement("img");
+                        Img.src="img/"+JSTr.imgsrc;
+
+                        Pimg.appendChild(Img);
+                    }else{
+
+                    }
+                }
+            }
+            xhr.send();
+        }
+        var Btn2=document.getElementById("btn2");
+        Btn2.onclick=function () {
+            var xhr;
+            if(window.XMLHttpRequest){
+                xhr=new XMLHttpRequest();
+            }else{
+                xhr=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhr.open("get","data/package.json",true);
+            xhr.onreadystatechange=function () {
+                if(xhr.readyState==4){
+                    var Odiv=document.getElementById("div1");
+                    if(xhr.status=2){
+                        var STr=xhr.responseText;
+//                        alert(STr)
+//                        var JSTr=JSON.parse(STr);//package.json中存的是string类型
+                        var Pname=document.getElementById("pName");
+                        Pname.innerHTML=JSTr.name;
+                        var Page=document.getElementById("pAge");
+                        Page.innerHTML=JSTr.age;
+                        var Pimg=document.getElementById("pImg");
+                        var Img=document.createElement("img");
+                        Img.src="img/"+JSTr.imgsrc;
+
+                        Pimg.appendChild(Img);
+                    }else{
+
+                    }
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

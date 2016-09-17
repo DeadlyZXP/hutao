@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+            width: 48px;
+            height: 40px;
+            position: absolute;
+            top:0;
+            left:0;
+            background:url(img/1.gif);
+        }
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		
+		<script>
+			var timer;
+			document.onmousedown=function(e){
+				document.onmousemove=function(e){
+					e=e||window.event;
+					var Div=document.createElement("div");
+					
+					Div.style.width="6px";
+					Div.style.height="6px";
+					Div.style.position="absolute";
+					Div.style.background="red";
+					Div.style.top=e.clientY+"px";
+					Div.style.left=e.clientX+"px";
+					document.body.appendChild(Div);
+					}
+				}
+			document.onmouseup=function(){
+				document.onmousemove=null;
+				var oDiv=document.getElementById("div1");
+        		oDiv.style.background="url('img/2.gif')";
+				var Odiv=document.getElementsByTagName("div");
+					var i=0;
+					var timer=setInterval(function(){
+					if(i>Odiv.length-1){
+						clearInterval(timer);
+					}else if(i<Odiv.length-1){
+						clear(i);
+						i++;
+					}else{
+						Odiv[i].style.width="48px";
+						Odiv[i].style.height="40px";
+						Odiv[i].style.background="url('img/1.gif')";
+
+//						var Odiv1=document.createElement("div");
+//						Odiv1.style.position="absolute";
+//						document.body.appendChild(Odiv1);
+//						Odiv1.style.top="0";
+//						Odiv1.style.left="0";
+//						Odiv1.style.background="url('img/1.gif')";
+					}
+				},20)
+					function clear(j){
+						var oDiv=document.getElementById("div1");
+        				oDiv.style.background="url('img/2.gif')";
+        				oDiv.style.position="absolute";
+        				document.body.appendChild(oDiv);
+						oDiv.style.top=Odiv[j].offsetTop+"px";
+               			oDiv.style.left=Odiv[j].offsetLeft+"px";
+               			Odiv[j].style.display="none";
+					}
+//					var Odiv1=document.createElement("div");
+//						Odiv1.style.position="absolute";
+//						document.body.appendChild(Odiv1);
+//						Odiv1.style.top="0";
+//						Odiv1.style.left="0";
+//						Odiv1.style.background="url('img/1.gif')";
+				}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>胡淘网后台管理</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+		<link rel="stylesheet" type="text/css" href="css/premium.css">
+		<script src="js/jquery-3.1.0.js" type="text/javascript"></script>
+		<script src="js/bootstrap.js" type="text/javascript"></script>
+		<script src="js/addproduct.js"></script>
+		<script src="js/catchproduct.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<!--顶部注释-->
+		<nav class="navbar navbar-default">
+			<div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-left ">
+				<img class="pull-left logo-image" alt="Brand" src="images/logo.png">
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 logo">
+					<p>胡淘网后台管理系统</p>
+				</div>
+			</div>
+			<div class=" pull-right navbar-r1 ">
+				<div class="administator">
+					<a href="#">
+						<p class="revise">[修改信息]</p>
+					</a>
+					<img class="pull-right" src="images/administrator.png" />
+				</div>
+				<a href="#">
+					<div class="navbar-r pull-right">
+						<img src="images/cancel.png" />
+					</div>
+				</a>
+			</div>
+		</nav>
+		<div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 nav-left left">
+			<ul id="main-nav" class="nav nav-tabs nav-stacked" style="">
+				<li>
+					<a href="#">
+						首页
+						<img class="pull-right" src="images/index.png"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse">
+						<img src="images/item-management.png" /> 项目管理
+						<img class="pull-right dropicon" src="images/drop.png"></i>
+					</a>
+					<ul id="systemSetting" class="nav nav-list collapse secondmenu" style="height: 0px;">
+						<li>
+							<a href="#">报备项目</a>
+						</li>
+						<li>
+							<a href="#">报备的项目</a>
+						</li>
+						<li>
+							<a href="#">查询项目</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="./plans.html">
+						<img class="nav-icon" src="images/check-price.png" /> 查询报价
+					</a>
+				</li>
+				<!--<li>
+					<a href="#systemSetting2" class="nav-header collapsed" data-toggle="collapse">
+						<img src="images/oeder-list.png" /> 管理订单
+						<img class="pull-right dropicon" src="images/drop.png"></i>
+					</a>
+					<ul id="systemSetting2" class="nav nav-list collapse secondmenu" style="height: 0px;">
+						<li>
+							<a href="#">项目订单</a>
+						</li>
+						<li>
+							<a href="#">销售订单</a>
+						</li>
+						<li>
+							<a href="#">样品订单</a>
+						</li>
+						<li>
+							<a href="#">库存订单</a>
+						</li>
+						<li>
+							<a href="#">生产订单</a>
+						</li>
+						<li>
+							<a href="#">主管审批</a>
+						</li>
+						<li>
+							<a href="#">经理审批</a>
+						</li>
+						<li>
+							<a href="#">运营订单</a>
+						</li>
+						<li>
+							<a href="#">查询订单</a>
+						</li>
+					</ul>
+				</li>-->
+				<li>
+					<a href="#systemSetting3" class="nav-header collapsed" data-toggle="collapse">
+						<img src="images/system-maintain.png" /> 平台维护
+						<img class="pull-right dropicon" src="images/drop.png"></i>
+					</a>
+					<ul id="systemSetting3" class="nav nav-list collapse secondmenu" style="height: 0px;">
+						<li>
+							<a href="#">角色管理</a>
+						</li>
+						<li>
+							<a href="#">用户管理</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="tip">
+				<div class="tip1">
+					<img src="images/lable.png" /><span>贴心小提示</span>
+					<p>感谢您使用合作伙伴平台，如有问题，及时反馈给我们哦。</p>
+				</div>
+			</div>
+		</div>
+		<!--右侧内容页-->
+		<div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10 pull-right left1">
+			<div class="main-title">
+				<p class="title">项目管理/报备项目</p>
+				<hr class="cutline" />
+			</div>
+			<div class="col-lg-12 col-lg-12 row2">
+				<div class="row search">
+					<div class="col-lg-4 col-md-md col-sm-4 col-xs-12 small-width">
+						<div class="input-group search1">
+							<span class="input-group-addon" id="sizing-addon2"><img src="images/search.png"/></span>
+							<input type="text" class="form-control" placeholder="请输入产品ID" aria-describedby="sizing-addon2">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row btn-row  col-md-12 col-lg-12">
+				<button type="button" class="btn btn-info  btn-query pull-left" data-toggle="modal" data-target=".bs-example-modal-lg">查询 </button>
+				<button type="button" class="btn btn-default  btn-query2 pull-left" data-toggle="modal" data-target=".bs-example-modal-lg">新增产品</button>
+			</div>
+			<!-- Large modal -->
+			<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content model-style" style="height: 800px;">
+						<div class="col-lg-12  data-line">
+							产品名称：<input type="text" class="form-control col-md-6" id="productName" placeholder="请输入产品名称" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-12 data-line">
+							产品描述：<textarea type="text" class="form-control col-md-6 " id="productInf" placeholder="请输入产品描述" aria-describedby="sizing-addon2" style="height: 100px;"></textarea>
+						</div>
+						<div class="col-lg-3 data-line">
+							商品类型：<input type="text" class="form-control col-md-6 " id="productObj" placeholder="请输入商品类型" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							商品编号：<input type="text" class="form-control col-md-6 " id="productId" placeholder="请输入商品编号" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							原价格 <input type="text" class="form-control col-md-6 " id="productOld" placeholder="请输入产品原价格" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							现价格：<input type="text" class="form-control col-md-6 " id="productNew" placeholder="请输入产品现价格" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-6 data-line">
+							数量：<input type="text" class="form-control col-md-6 " id="productMany" placeholder="请输入产品数量" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-6 data-line">
+							其他：<input type="text" class="form-control col-md-6 " id="productSub" placeholder="请输入产品折扣" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-6 data-line">
+							购买人数：<input type="text" class="form-control col-md-6 " id="productPeo" placeholder="0" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-6 data-line">
+							规格：<input type="text" class="form-control col-md-6 " id="productInfM" placeholder="请输入产品规格" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							图片1：<input type="text" class="form-control col-md-3 " id="productImg1" placeholder="请输入图片地址" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							图片2：<input type="text" class="form-control col-md-3 " id="productImg2" placeholder="请输入图片地址" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							图片3：<input type="text" class="form-control col-md-3 " id="productImg3" placeholder="请输入图片地址" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							图片4：<input type="text" class="form-control col-md-3 " id="productImg4" placeholder="请输入图片地址" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							图片5：<input type="text" class="form-control col-md-3 " id="productImg5" placeholder="请输入图片地址" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							详情图片：<input type="text" class="form-control col-md-3 " id="productImg6" placeholder="请输入图片地址" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							展示图片：<input type="text" class="form-control col-md-3 " id="productImg7" placeholder="请输入图片地址" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							品牌：<input type="text" class="form-control col-md-3 " id="productIP" placeholder="请输入品牌" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							国家：<input type="text" class="form-control col-md-3 " id="productC" placeholder="请输入国家" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							毛重：<input type="text" class="form-control col-md-3 " id="productW" placeholder="请输入重量" aria-describedby="sizing-addon2">
+						</div>
+						<div class="col-lg-3 data-line">
+							营销方式：<input type="text" class="form-control col-md-3 " id="productMethod" placeholder="请输入营销方式" aria-describedby="sizing-addon2">
+						</div>
+						<button type="button" class="btn btn-info  btn-query check" data-dismiss="modal">提交 </button>
+					</div>
+				</div>
+			</div>
+			<table class="am-table am-table-striped am-table-hover table-main" style="table-layout: fixed;text-align: center;">
+				<thead>
+					<tr style="width: 100%;">
+						<th style="width: 10%;text-align: center;" class="table-check">产品ID</th>
+						<!--<th style="width: %;" class="table-id"></th>-->
+						<th style="width: 20%;text-align: center;" class="table-title">产品名称</th>
+						<th style="width: 30%;text-align: center;" class="table-type">产品描述</th>
+						<th style="width: 10%;text-align: center;" class="table-author">产品价格</th>
+						<th style="width: 10%;text-align: center;" class="table-date">详细信息</th>
+						<th style="width: 10%;text-align: center;" class="table-date">修改</th>
+						<th style="width: 10%;text-align: center;" class="table-set">删除</th>
+					</tr>
+				</thead>
+				<tbody class="table-main-tbody">
+				</tbody>
+			</table>
+			<div class="col-lg-10 col-md-10 col-md-offset-3 bottom-distance">
+				<div class="page-list">
+					<ul class="pagination page-align">
+						<!--<li><a href="#">&laquo;</a></li>-->
+						<li class="active">
+							<a href="#">1</a>
+						</li>
+						<li >
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">5</a>
+						</li>
+						<li>
+							<a href="#">6</a>
+						</li>
+						<!--<li>
+							<a href="#">&raquo;</a>
+						</li>-->
+						<!--<li class="page-down"></li>-->
+					</ul>
+					<div class="page-total" ng-show="conf.totalCount > 0">
+						<!--每页共有
+						<select ng-model="conf.pageSize" ng-options="option for option in conf.pageSizeOptions" class="select-border">
+							<option>10</option>
+							<option>20</option>
+							<option>30</option>
+							<option>40</option>
+						</select>条数据&nbsp;&nbsp;--> 共
+						<strong ng-bind="conf.numberOfPages">6</strong>页 
+						<!--<input type="number" ng-model="conf.jumpPage" ng-keyup="goPage($event)" / class="select-border">页&nbsp;&nbsp;
+						<button type="button" ng-click="goPageClick($event)" class="btn btn-default">跳转</button> &nbsp;&nbsp;-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

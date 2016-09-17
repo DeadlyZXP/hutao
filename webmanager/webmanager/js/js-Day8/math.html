@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var num=Math.random()*101;
+			var num2=Math.random()*100;
+//			document.write(Math.round(num+100));
+			var num3=Math.random()*300+100;
+			if(num3>300){
+				document.write(300);
+			}else if(num3<200){
+				document.write(200);
+			}else{
+				document.write(Math.round(num3));
+			}
+			//包含B
+			function randomEX(a,b){
+				return Math.floor(Math.random(b-a+1))+a;
+			}
+		</script>
+	</body>
+</html>

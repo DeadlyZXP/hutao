@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        ul,li{list-style: none;}
+        #divbox{
+            width: 810px;
+            height: 320px;
+            margin:0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #ul1{
+            width: 4050px;
+            position: absolute;
+        }
+        #ul1 li{
+            width:810px;
+            height:320px;
+            float:left;
+        }
+        #ul2{
+            position: absolute;
+            left: 360px;
+            top: 280px;
+        }
+        #ul2 li{
+            float: left;
+            width:16px;
+            height:16px;
+            text-align: center;
+            margin-left: 4px;
+
+        }
+        .lion{
+            background: #e98b4d;
+        }
+        .liom{
+            background: white;
+        }
+        #btn1,#btn2{
+            position: absolute;
+            width:40px;
+            height:60px;
+            top:100px;
+        }
+        #btn1{left: 190px;}
+        #btn2{right: 190px;}
+    </style>
+    <script src="js/moveUti.js"></script>
+</head>
+<body>
+    <div id="divbox">
+        <div id="imgbox">
+            <ul id="ul1">
+                <li><img src="img/001.jpg"/></li>
+                <li><img src="img/002.jpg"/></li>
+                <li><img src="img/003.jpg"/></li>
+                <li><img src="img/004.jpg"/></li>
+                <li><img src="img/001.jpg"/></li>
+            </ul>
+        </div>
+        <ul id="ul2">
+            <li class="lion">1</li>
+            <li class="liom">2</li>
+            <li class="liom">3</li>
+            <li class="liom">4</li>
+            <!--<li class="liom">5</li>-->
+        </ul>
+    </div>
+    <input id="btn1" type="button"/>;
+    <input id="btn2" type="button"/>;
+    <script>
+        var Ul1=document.getElementById("ul1");
+        var Ul2=document.getElementById("ul2");
+        var Btn1=document.getElementById("btn1");
+        var Btn2=document.getElementById("btn2");
+        var Lilist=Ul2.children;
+        var timer;
+        var pageIndex=1;
+        start();
+//        Ul2的li随图片轮播改变背景
+        setPageindex=function (index) {
+            for(var i=0;i<Lilist.length;i++){
+                Lilist[i].className="liom";
+            }if(index==5){
+                Lilist[0].className="lion";
+            }else{
+                Lilist[index-1].className="lion";
+            }
+        }
+        for(var i=0;i<Lilist.length;i++){
+            Lilist[i].index=i;
+            Lilist[i].onclick=function () {
+                clearInterval(timer);//点击时清除自动轮播
+//                Imgbox.children[this.index].;
+                var target={
+                    left:(this.index)*(-810)
+                }
+//                alert(Imgbox.children[this.index].offsetLeft);
+//                alert(this.index);
+                Move(Ul1,target,start);//点击后回调自动轮播
+                pageIndex=this.index;//防止点击后图片跳页
+                setPageindex(this.index+1);//点击时Ul2里li的背景图也随时改变；
+            }
+        }
+//        自动轮播
+        function start() {
+//            if(!flag){
+                timer=setInterval(function () {
+                    if(pageIndex==5){
+                        Ul1.style.left=0;
+                        pageIndex=1;
+                    }
+                    var targe={
+                        left:pageIndex*(-810)
+                    }
+                    Move(Ul1,targe);
+                    pageIndex++;
+                    setPageindex(pageIndex);
+                },3000)
+//            }
+        }
+        var Txt;
+        Btn1.onclick=function(){
+            clearInterval(timer);
+            for(var i=0;i<Lilist.length;i++){
+                if(Lilist[i].className=="lion"){
+                    Txt=parseInt(Lilist[i].innerHTML);
+//                    alert(Txt);
+                }
+            }
+            if(Txt==4){
+                Ul1.style.left=0;
+                Txt=0;
+//                alert("到头了");
+            }
+            var targe={
+                left:(Txt)*(-810)
+            }
+            Move(Ul1,targe,start);
+            Txt++;
+            setPageindex(Txt);
+        }
+
+
+
+
+//        var flag=true;
+//        Ul1.onmouseover=function () {
+//            flag=false;
+//        }
+//        Ul1.onmouseout=function () {
+//            flag=true;
+//        }
+    </script>
+</body>
+</html>

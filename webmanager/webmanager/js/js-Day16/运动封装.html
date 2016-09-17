@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运动封装</title>
+    <style>
+        #div1{
+            width:100px;
+            height:100px;
+            position: absolute;
+            top: 600px;
+            left:100px;
+            background: lightsalmon;
+        }
+    </style>
+    <script src="js/moveUti.js"></script>
+    <script src="js/moveUtil.js"></script>
+    <script src="js/startMove.js"></script>
+</head>
+<body>
+    <div id="div1"></div>
+    <input type="text" id="txt1" />
+    <input type="text" id="txt2" />
+    <input type="text" id="txt3" />
+    <input type="text" id="txt4" />
+    <input type="button" id="btn1" value="改变形状" />
+    <script>
+        var Txt1=document.getElementById("txt1");
+        var Txt2=document.getElementById("txt2");
+        var Txt3=document.getElementById("txt3");
+        var Txt4=document.getElementById("txt4");
+        var Btn=document.getElementById("btn1");
+        var oDiv=document.getElementById("div1");
+        Btn.onclick=function () {
+            var Txtleft=parseInt(Txt1.value);
+            var Txttop=parseInt(Txt2.value);
+            var Txtwidth=parseInt(Txt3.value);
+            var Txtopacity=parseInt(Txt4.value);
+            var target= {
+                left: Txtleft,
+                top: Txttop,
+                width: Txtwidth,
+                opacity:Txtopacity
+            }
+            Move(oDiv,target);
+//            move(oDiv,target);
+//            startMove(oDiv,target);
+        }
+    </script>
+</body>
+</html>

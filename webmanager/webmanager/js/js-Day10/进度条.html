@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>进度条</title>
+		<style>
+			#div1{
+				width: 300px;
+				height: 40px;
+				border: 1px solid #eee;
+				margin: 0 auto;
+			}
+			#p1{
+				display: block;
+				width: 300px;
+				height: 10px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2"></div>
+		</div>
+		<p id="p1"></p>
+		<script>
+			var div1=document.getElementById("div1");
+			var div2=document.getElementById("div2");
+			var p1=document.getElementById("p1");
+			var i=0;
+			var j=0;
+			//%
+//			var g=i/300*100;
+//			alert(g);
+			time=setInterval(function(){
+				if(i>100){
+					clearInterval(time);
+				}else{
+					p1.innerHTML=i+"%";
+				
+					div2.style.width=j+"px";
+					j+=3;
+					
+					div2.style.height="40px";
+					div2.style.backgroundColor="lightcoral";
+					i++;
+				}
+			},100)
+		</script>
+	</body>
+</html>

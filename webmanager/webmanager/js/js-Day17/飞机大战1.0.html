@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>飞机大战1.0</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        #bg{
+            width: 320px;
+            height: 568px;
+            margin:0 auto;
+            background: url("img/image/background_1.png");
+            position: relative;
+            overflow: hidden;
+        }
+        #box{
+            width: 66px;
+            height:80px;
+            background: url("img/image/我的飞机.gif");
+            position: absolute;
+            top: 480px;
+            left:126px;
+        }
+    </style>
+    <script src="js/moveUti.js"></script>
+</head>
+<body>
+    <div id="bg">
+        <div id="box"></div>
+    </div>
+    <script>
+        var OdivBox=document.getElementById("box");
+        var OdivBg=document.getElementById("bg");
+        OdivBox.onmousemove=function(e) {
+            e = e || window.event;
+            var etop = e.clientY;
+            var eleft = e.clientX;
+            //获取鼠标在OdivBg中的点击位置
+                e = e || window.event;
+                var top = etop-40;
+                var left = eleft-510;
+            if(top<0){
+                top=0;
+            }
+            if(top>568-66){
+                top=502;
+            }
+            if(left<-33){
+                left=-33;
+            }
+            if(left>287){
+                left=287;
+            }
+                OdivBox.style.top = top + "px";
+                OdivBox.style.left = left + "px";
+
+            Get();
+            Movebullet();
+//            创建子弹
+            function Get() {
+                var Odiv1=document.createElement("div");
+                Odiv1.style.width="6px";
+                Odiv1.style.class="bullet1"
+                Odiv1.style.height="14px";
+                Odiv1.style.background="lightcoral";
+                Odiv1.style.position="absolute";
+                Odiv1.style.top=OdivBox.offsetTop+"px";
+                Odiv1.style.left=OdivBox.offsetLeft+33+"px";
+                Odiv1.style.background="url(img/image/bullet1.png) no-repeat";
+                OdivBg.appendChild(Odiv1);
+            }
+//            子弹移动
+            function Movebullet() {
+                var timer=setInterval(function () {
+                    var Bullet=document.getElementsByClassName("bullet1");
+                    for(var i=0;i<Bullet.length;i++){
+                        var target={
+                            top:0
+                        }
+                        Move(Bullet[i],target);
+                    }
+                },1000)
+            }
+        }
+    </script>
+</body>
+</html>

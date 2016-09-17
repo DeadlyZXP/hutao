@@ -1,0 +1,117 @@
+                  <!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			ul,
+			li {
+				list-style: none;
+			}
+			
+			#div {
+				width: 300px;
+				height: 30px;
+				background-color: cyan;
+			}
+			
+			#tab>li {
+				height: 30px;
+				width: 80px;
+				float: left;
+				overflow: hidden;
+			}
+			
+			#tab>li>a {
+				text-align: center;
+				line-height: 30px;
+				display: block;
+				height: 30px;
+			}
+			
+			#tab>li>div>a {
+				text-align: center;
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div">
+			<ul id="tab">
+				<li>
+					<a href="#" class="show">菜单1</a>
+					<div class="lowmenu">
+						<a href="#">菜单1</a>
+						<a href="#">菜单1</a>
+						<a href="#">菜单1</a>
+						<a href="#">菜单1</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="show">菜单1</a>
+					<div class="lowmenu">
+						<a href="#">菜单1</a>
+						<a href="#">菜单1</a>
+						<a href="#">菜单1</a>
+						<a href="#">菜单1</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="show">菜单1</a>
+					<div class="lowmenu">
+						<a href="#">菜单1</a>
+						<a href="#">菜单1</a>
+						<a href="#">菜单1</a>
+						<a href="#">菜单1</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var shows = document.getElementsByClassName("show");
+			var div = document.getElementById("div");
+			var lis = document.getElementsByTagName("li");
+			var lowmenu = document.getElementsByClassName("lowmenu");
+			var timer="";
+			for(var i = 0; i < shows.length; i++) {
+				shows[i].index = i;
+				lowmenu[i].index=i;
+				shows[i].onmouseover = function() {
+					var i = this.index;
+					window.clearInterval(timer);
+					lis[i].style.backgroundColor = "orange";
+					lis[i].style.color = "white";
+					lis[i].style.overflow = "visible";
+				}
+				shows[i].onmouseout = function() {
+					var i = this.index;
+				    timer=setInterval(function() {
+						lis[i].style.backgroundColor = "cyan";
+						lis[i].style.overflow = "hidden";
+					}, 200);
+				}
+				lowmenu[i].onmouseover=function(){
+					window.clearInterval(timer);
+					var i = this.index;
+					lowmenu[i].style.background="red";
+				}
+				lowmenu[i].onmouseout=function(){
+					var i = this.index;
+					lowmenu[i].style.background="white";
+					 timer=setInterval(function() {
+						lis[i].style.backgroundColor = "cyan";
+						lis[i].style.overflow = "hidden";
+					}, 200);
+				}
+			}
+		</script>
+	</body>
+
+</html>

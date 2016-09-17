@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="name" /><br />
+		<input type="password" id="password" /><br />
+		<input type="button" id="btn1" value="注册" />
+		<input type="button" id="btn2" value="登录" />
+		<script>
+			var Name=document.getElementById("name");
+			var Pass=document.getElementById("password");
+			var Btn1=document.getElementById("btn1");
+			var Btn2=document.getElementById("btn2");
+//			var i=1;
+			Btn1.onclick=function(){
+				var userName=Name.value;
+				var passWord=Pass.value;
+				var user=userName+"&"+passWord;
+				document.cookie="User="+user;
+//				document.cookie="User"+i+"="+user;
+			}
+			Btn2.onclick=function(){
+				var userName=Name.value;
+				var passWord=Pass.value;
+				var user=userName+"&"+passWord;
+				var arrcookie=document.cookie;
+				var brr;
+				var arr=arrcookie.split("; ");
+				for(var i=0;i<arr.length;i++){
+					var use=arr[i].split("=");
+					if(use[0]=="User"){
+						brr=use[1];
+					}
+				}
+//				alert(brr[0]);
+//				alert(user[0]);
+				var brr1=brr.split("&");
+				var user1=user.split("&");
+				if(brr==user){
+					alert("登录成功");
+				}else if(brr1[0]!=user1[0]){
+					alert("用户名不正确");
+				}else{
+					alert("密码不正确");
+				}
+			}
+		</script>
+	</body>
+</html>

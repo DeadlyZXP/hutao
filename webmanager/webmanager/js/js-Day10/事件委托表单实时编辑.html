@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			table{
+				width: 600px;
+				height: 200px;
+				border: 1px solid #E0E0E0;
+			}
+			td{
+				width: 25%;
+				border: 1px solid #E0E0E0;
+			}
+		</style>
+		<script src="js/EX.js"></script>
+	</head>
+	<body>
+		<table id="table1">
+			<tr>
+				<td id="td1">实时表单</td>
+				<td>创建input</td>
+				<td>事件冒泡</td> 
+			</tr>
+			<tr>
+				<td>实时表单</td>
+				<td>创建input</td>
+				<td>事件冒泡</td> 
+			</tr>
+			<tr>
+				<td>实时表单</td>
+				<td>创建input</td>
+				<td>事件冒泡</td> 
+			</tr>
+		</table>
+		<script>
+			var Otable=document.getElementById("table1");
+			var Td=Otable.getElementsByTagName("td");
+//			for(var i=0;i<Td.length;i++){
+				Otable.onclick=function(event){
+					event=EX.getEvent(event);
+					var Input=document.createElement("input");
+					Input.type="text";
+					Input.value=EX.getTarget(event).innerHTML;
+					EX.getTarget(event).innerHTML="";
+					EX.getTarget(event).appendChild(Input);
+//					alert(EX.getTarget(event).id);
+					Input.focus();
+					Input.onclick=function(event){
+						var event=EX.getEvent(event);
+						EX.Stopropagation(event);
+					}
+					Input.onblur=function(){
+						var Txt=this.value;
+						this.parentNode.innerHTML=Txt;
+					}
+				}
+		</script>
+	</body>
+</html>

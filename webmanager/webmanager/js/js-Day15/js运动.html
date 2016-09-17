@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>div移动</title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				left: 20px;
+				top: 200px;
+				background: lawngreen;
+			}
+		</style>	
+	</head>
+	<body>
+		<input type="button" id="btn2" value="左移" />
+		<input type="button" id="btn1" value="右移" />
+		<input type="button" id="btn3" value="停止移动" />
+		<div id="div1"></div>
+		<script>
+			var Odiv=document.getElementById("div1");
+			var bTn1=document.getElementById("btn1");
+			var bTn2=document.getElementById("btn2");
+			var bTn3=document.getElementById("btn3");
+			var timer;
+			bTn1.onclick=function(){
+				clearInterval(timer);
+				timer=setInterval(function(){
+					if(Odiv.offsetLeft+11>=900){
+						clearInterval(timer);
+						Odiv.style.left="900px";
+					}else{
+						Odiv.style.left=Odiv.offsetLeft+11+"px";
+					}
+				},30)
+			}
+			bTn2.onclick=function(){
+				clearInterval(timer);
+				timer=setInterval(function(){
+					if(Odiv.offsetLeft-11<=20){
+						clearInterval(timer);
+						Odiv.style.left="20px";
+					}else{
+						Odiv.style.left=Odiv.offsetLeft-11+"px";
+					}
+				},30)
+			}
+			bTn3.onclick=function(){
+				clearInterval(timer);
+			}
+		</script>
+	</body>
+</html>

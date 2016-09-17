@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var person=new Object();
+			//属性
+			person.name="张三";
+			person.age=20;
+			//方法
+			person.showname=function(){
+				alert(this.name);
+			}
+//			person.showname();
+			//字面量定义
+			var personEx={
+				name:"张思",
+				age:100,
+				showname:function(){
+					alert(this.name);
+				}
+			}
+//			personEx.showname();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>排序勾股定理运动</title>
+    <script src="js/moveUti.js"></script>
+</head>
+<body>
+
+<script>
+    var Height=document.body.clientHeight||document.documentElement.clientHeight||window.innerHeight;
+    var Width=document.body.clientWidth||document.documentElement.clientWidth||window.innerWidth;
+    var Count=Math.floor(Height/5);
+    var arr=[];
+    for(var i=0;i<Count;i++){
+        var Odiv=document.createElement("div");
+        Odiv.style.height="5px";
+        Odiv.style.width="5px";
+        Odiv.style.position="absolute"
+        var Divleft=Math.floor(Math.random()*(Width-5));
+        var Divtop=Math.floor(Math.random()*(Height-5));
+        Odiv.style.left=Divleft+"px";
+        Odiv.style.top=Divtop+"px";
+        document.body.appendChild(Odiv);
+        var color1=parseInt(Math.random()*256);
+        var color2=parseInt(Math.random()*256);
+        var color3=parseInt(Math.random()*256);
+        Odiv.style.backgroundColor="rgb("+color1+","+color2+","+color3+")";
+    }
+    document.onclick=function () {
+        var index;
+        var Odivlist=document.getElementsByTagName("div");
+        for(var i=0;i<Odivlist.length;i++){
+            arr.push(Odivlist[i]);
+        }
+//        arr=document.getElementsByTagName("div");
+       for(var i=0;i<arr.length;i++) {
+           for(var j=0;j<arr.length-i-1;j++){
+               var a=parseInt(arr[j].offsetLeft * arr[j].offsetLeft + arr[j].offsetTop * arr[j].offsetTop);
+               var b=parseInt(arr[j+1].offsetLeft * arr[j+1].offsetLeft + arr[j+1].offsetTop * arr[j+1].offsetTop);
+                if(a>b){
+                   var t=arr[j];
+                   arr[j]=arr[j+1];
+                   arr[j+1]=t;
+               }
+           }
+       }
+        for(var i=0;i<arr.length;i++){
+            var Odivleft=parseInt(Width/Count*(i));
+            var OdivTop=parseInt(5*(i));
+            var target={
+                left:Odivleft,
+                top:OdivTop
+            }
+            Move(arr[i],target);
+        }
+    }
+//    颜色的随机也可以用下面的方法
+//    function getRandomColor(){
+//        var str="000000"+Math.floor(Math.random()*0x1000000).toString(16);
+//        return "#"+str.substr(-6);  //#FFFFFF   #000000
+//    }
+</script>
+</body>
+</html>

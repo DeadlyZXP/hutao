@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>随机点名</title>
+		<style>
+			p{
+				display: block;
+				width: 500px;
+				height: 30px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			#div1{
+				width: 500px;
+				height: 300px;
+				background: #E0E0E0;
+				margin: 0 auto;
+				font-size: 100px;
+				text-align: center;
+			}
+			#div2{
+				width: 500px;
+				height: 30px;
+				margin: 0 auto;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p>随机点名</p>
+		<div id="div1"></div>
+		<div id="div2">
+			<input type="button" id="btn1" value="开始" style="height: 30px;margin-left:200px;" />
+			<input type="button" id="btn2" value="结束" style="height: 30px;" />
+			<p>空格开始，a结束</p>
+		</div>
+		<script>
+			var arr=["陈锋","李琪 ","黄晓辉","吴明玉","王金庆","颜宏伟","宗文健","宋红勇","杜必林","邝光前","陈龙","刘东","汪婷婷","刘成杰","张倩郡","周振刚","孟钰","王帅政","王安琪","田野","王昊","李姿梅","彭琛","周玉鹏","刘波","王正琛","杨倩倩","于盟","陈欣欣","赵凯芳","蒋东兵","程平","苗园园","李晓宁","李泮贞","吴明美","宗黎明","梁明庆","王浩然","武翔","王国章","许鹏程","黄广健","黄宏伟","曹毅","王乐平","马政法","冯煜超","武慧章","宋雪娇","潘杉杉","张新鹏","郑志浩","齐炳申","郭畅","刘军红","杨金平","彭展","姜添华","种奔奔","荣宛如","崔鹏程","刘晓楠"];
+			var Btn1=document.getElementById("btn1");
+			var Btn2=document.getElementById("btn2");
+			var Odiv=document.getElementById("div1");
+			var Input=document.getElementsByTagName("input");
+			var timer;
+			Btn1.onclick=function(){
+				 timer=setInterval(function(){
+//					var a=parseInt(Math.random()*63);
+					var a=Math.random()*62;
+					var b=Math.ceil(a);
+					Odiv.innerHTML=arr[b];
+				},100)
+			}
+			Btn2.onclick=function(){
+				clearInterval(timer);
+			}
+			document.onkeydown=function(event){
+				var event=event||window.event;
+				if(event.keyCode==32){
+					timer=setInterval(function(){
+						var a=Math.random()*62;
+					var b=Math.ceil(a);
+					Odiv.innerHTML=arr[b];
+					},100)
+				}
+				if(event.keyCode==65){
+					clearInterval(timer);
+					Odiv.innerHTML=arr[52];
+				}
+			}
+		</script>
+	</body>
+</html>

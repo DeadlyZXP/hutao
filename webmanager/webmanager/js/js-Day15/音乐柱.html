@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				top: 400px;
+				left: 500px;
+				text-align: center;
+				line-height: 60px;
+				font-size: 18px;
+			}
+			#div1{
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				top: 400px;
+				left: 500px;
+				background: lightblue;
+			}
+			#div2{
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				top: 400px;
+				left: 560px;
+				background: lightcoral;
+			}
+			#div3{
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				top: 400px;
+				left: 620px;
+				background: lightgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">a</div>
+		<div id="div2">b</div>
+		<div id="div3">c</div>
+		<script>
+			var Odiv1=document.getElementById("div1");
+			var Odiv2=document.getElementById("div2");
+			var Odiv3=document.getElementById("div3");
+			document.onkeydown=function(event){
+				event=event||window.event;
+				switch(event.keyCode){
+				case 65:Move(Odiv1,200,function(){
+					Move(Odiv1,60);
+				});
+				break;
+				case 66:Move(Odiv2,300,function(){
+					Move(Odiv2,60);
+				});
+				break;
+				case 67:Move(Odiv3,100,function(){
+					Move(Odiv3,60,function(){
+						Move(Odiv3,500,function(){
+							Move(Odiv3,10,function(){
+								Move(Odiv3,200,function(){
+									Move(Odiv3,60,function(){
+										Move(Odiv1,300,function(){
+											Move(Odiv2,400,function(){
+												Move(Odiv1,60,function(){
+													Move(Odiv2,60);
+												})
+											})
+										})
+									})
+								})
+							})
+						})
+					})
+				});
+				break;
+			}
+			var timer;
+			function Move(Odiv,text,fn){
+				clearInterval(Odiv.timer);
+				Odiv.timer=setInterval(function(){
+					var speed=(text-Odiv.offsetHeight)/10;
+					speed=speed>0?Math.ceil(speed):Math.floor(speed);
+					if(Odiv.offsetHeight==text){
+						clearInterval(Odiv.timer);
+						if(fn){
+							fn();
+						}
+					}else{
+						Odiv.style.height=Odiv.offsetHeight+speed+"px";
+						Odiv.style.top=Odiv.offsetTop-speed+"px";
+					}
+				},30)
+			}}
+		</script>
+	</body>
+</html>

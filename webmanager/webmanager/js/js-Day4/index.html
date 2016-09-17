@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.first {
+				width: 298px;
+				height: 298px;
+				border: 1px solid #eee;
+				margin: 0 auto;
+			}
+			
+			#topinput {
+				width: 298px;
+				height: 60px;
+			}
+			
+			#btn1,
+			#btn2,
+			#btn3,
+			#btn4 {
+				height: 60px;
+				width: 25%;
+				float: left;
+			}
+			
+			#firstbot {
+				height: 238px;
+				width: 298px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#firstbot img {
+				position: absolute;
+				/*z-index: 0;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="first">
+			<div id="topinput">
+				<input type="button" id="btn1" value="1" />
+				<input type="button" id="btn2" value="2" />
+				<input type="button" id="btn3" value="3" />
+				<input type="button" id="btn4" value="4" />
+			</div>
+			<div id="firstbot" style="background:red">
+				<img src="img/list1.png" />
+				<img src="img/list2.png" />
+				<img src="img/list3.png" />
+				<img src="img/list4.png" />
+			</div>
+		</div>
+		<script type="text/javascript">
+			var zIndex = 0;
+			var Btn1 = document.getElementById("btn1");
+			var Btn2 = document.getElementById("btn2");
+			var Btn3 = document.getElementById("btn3");
+			var Btn4 = document.getElementById("btn4");
+			var Fbot = document.getElementById("firstbot");
+			var Btnlist = document.getElementsByTagName("input");
+			var Img = document.getElementsByTagName("img");
+			//			Btn1.onclick=function(){
+			//				Fbot.style.background="url(img/list_03.png)";
+			//			}
+			//			Btn2.onclick=function(){
+			//				Fbot.style.background="url(img/list_05.png)";
+			//			}
+			//			Btn3.onclick=function(){
+			//				Fbot.style.background="url(img/list_07.png)";
+			//			}
+			//			Btn4.onclick=function(){
+			//				Fbot.style.background="url(img/list_13.png)";
+			//			}
+			//          z-index改变实现
+			//			Btn1.onclick = function() {
+			//				zIndex++;
+			//				Img[0].style.zIndex = zIndex;
+			//			}
+			//			Btn2.onclick = function() {
+			//				zIndex++;
+			//				Img[1].style.zIndex = zIndex;
+			//			}
+			//			Btn3.onclick = function() {
+			//				zIndex++;
+			//				Img[2].style.zIndex = zIndex;
+			//			}
+			//			Btn4.onclick = function() {
+			//				zIndex++;
+			//				Img[3].style.zIndex = zIndex;
+			//			}
+			//          循环写法
+			for(var i=0;i<Btnlist.length;i++){
+				   Btnlist[i].index=i;
+				   Btnlist[i].onclick=function(){
+				   	var Imgo=document.getElementById("btn1");
+				   	Imgo.src="img/list"+(this.index+1)+".png";
+				   }
+			}
+		</script>
+	</body>
+
+</html>

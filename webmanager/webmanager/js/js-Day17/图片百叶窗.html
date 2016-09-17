@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片百叶窗</title>
+    <style>
+        *{padding: 0;  margin:0;}
+        ul,li{list-style: none ;}
+        #imgbox{
+            width: 800px;
+            height:260px;
+            margin:0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #imgbox li{
+            position: absolute;
+        }
+        #imgbox li:nth-child(1){ left:0;}
+        #imgbox li:nth-child(2){ left:400px;}
+        #imgbox li:nth-child(3){ left:480px;}
+        #imgbox li:nth-child(4){ left:560px;}
+        #imgbox li:nth-child(5){ left:640px;}
+        #imgbox li:nth-child(6){ left:720px;}
+    </style>
+    <script src="js/moveUti.js"></script>
+</head>
+<body>
+    <ul id="imgbox">
+        <li><img src="img/1.jpg"/></li>
+        <li><img src="img/2.jpg"/></li>
+        <li><img src="img/3.jpg"/></li>
+        <li><img src="img/4.jpg"/></li>
+        <li><img src="img/5.jpg"/></li>
+        <li><img src="img/6.jpg"/></li>
+    </ul>
+    <script>
+        var Ul=document.getElementById("imgbox");
+        var Lilist=document.getElementsByTagName("li");
+        for(var i=1;i<Lilist.length;i++) {
+            Lilist[i].index = i;
+            Lilist[i].floag = true;
+            Lilist[i].onclick = function (){
+                for (var j = 1; j <= this.index; j++) {
+                    if (Lilist[j].floag) {
+                        var target = {
+                            left: Lilist[j].offsetLeft - 320
+                        }
+                        Move(Lilist[j], target);
+                        Lilist[j].floag = false;
+                    }
+                }
+            }
+            Lilist[i].onmouseout=function(){
+                    //clearInterval(this.timer)
+                    for (var i=1;i<Lilist.length;i++) {
+                        if(!Lilist[i].floag) {//为true时执行
+                            var target={
+                                left:400+(i-1)*80
+                            }
+                            Move(Lilist[i], target);
+                            Lilist[i].floag=true;
+                        }
+                    }
+                    //clearInterval(this.timer)
+                }
+        }
+
+
+
+    </script>
+</body>
+</html>

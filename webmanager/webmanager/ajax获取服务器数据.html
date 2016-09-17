@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX获取服务器数据</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="pId"></p>
+        <p id="pName"></p>
+        <p id="pPassword"></p>
+        <p id="ImgSrc"></p>
+    </div>
+    <input type="button" id="btn2" value="获取数据"/>
+    <script>
+        var Btn2=document.getElementById("btn2");
+        Btn2.onclick=function () {
+            var xhr;
+            if(window.XMLHttpRequest){
+                xhr=new XMLHttpRequest();
+            }else{
+                xhr=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhr.open("get","api/Users",true);
+            xhr.onreadystatechange=function () {
+                if(xhr.readyState==4){
+                    var Odiv=document.getElementById("div1");
+                    if(xhr.status=2){
+                        var STr=xhr.responseText;
+//                        alert(STr)
+//                        var JSTr=JSON.parse(STr);//package.json中存的是string类型
+                        var JSTr=eval("("+STr+")");
+                        alert(JSTr);
+                        var Pid=document.getElementById("pId");
+                        Pid.innerHTML=JSTr[0].Id;
+                        var Pname=document.getElementById("pName");
+                        Pname.innerHTML=JSTr[0].Name;
+                        var Ppassword=document.getElementById("pPassword");
+                        Ppassword.innerHTML=JSTr[0].password;
+                        var Pimg=document.getElementById("pImg");
+//                        var Img=document.createElement("img");
+//                        Img.src="img/"+JSTr[1].imgsrc;
+//                        Pimg.appendChild(Img);
+//                        Pimg.innerHTML=JSTr[0].ImgSrc;
+                    }else{
+
+                    }
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
