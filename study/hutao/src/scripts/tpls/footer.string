@@ -1,0 +1,96 @@
+ <div class="footer-box clear">
+        <ul class="footer-box-top">
+            <li>
+                <img src="img/special-service-num.png">
+                <p>
+                    <strong>NO.1</strong>
+                    <span>全球特卖</span>
+                </p>
+            </li>
+            <li>
+                <img src="img/special-service-true.png">
+                <p>
+                    <strong>100%</strong>
+                    <span>正品保证</span>
+                </p>
+            </li>
+            <li>
+                <img src="img/special-service-self.png">
+                <p>
+                    <strong>自营</strong>
+                    <span>7天无理由退货</span>
+                </p>
+            </li>
+            <li>
+                <img src="img/special-service-test.png">
+                <p>
+                    <strong>试点</strong>
+                    <span>保税区直发</span>
+                </p>
+            </li>
+            <li>
+                <img src="img/special-service-server.png">
+                <p>
+                    <strong>服务</strong>
+                    <span>全程保障</span>
+                </p>
+            </li>
+            <li>
+                <img src="img/special-service-fast.png">
+                <p>
+                    <strong>快捷</strong>
+                    <span>国际物流配送</span>
+                </p>
+            </li>
+        </ul>
+        <div class="footer-center">
+            <dl>
+                <dt>新手指南</dt>
+                <dd>
+                    <p><a href="#">今日汇率</a></p>
+                    <p><a href="#">账号注册</a></p>
+                    <p><a href="#">购物流程</a></p>
+                    <p><a href="#">会员制度</a></p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>售后保障</dt>
+                <dd>
+                    <p><a href="#">消费维权</a></p>
+                    <p><a href="#">纠纷处理</a></p>
+                    <p><a href="#">退货规则</a></p>
+                    <p><a href="#">常见问题</a></p>
+                    <p><a href="#">快递查询</a></p>
+                </dd>
+            </dl>
+            <dl>
+                <dt>招商中心</dt>
+                <dd>
+                    <p><a href="#">商家入驻要求</a></p>
+                    <p><a href="#">商家入驻流程</a></p>
+                    <p><a href="#">商家入驻资费</a></p>
+                    <p><a href="#">入驻常见问题</a></p>
+                </dd>
+            </dl>
+            <p class="footer-center-right">
+                <img src="img/ihutao1.jpg">
+                <span>微信告诉我们</span>
+                <span>你想买啥</span>
+            </p>
+            <p class="footer-center-center">
+                <span>服务热线</span>
+                <strong>400-687-3226</strong>
+                <i>(周一到周五&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp09:00 - 17:30)</i>
+            </p>
+        </div>
+        <ul class="footer-listli">
+            <li><a href="#">关于胡淘</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">商家合作</a></li>
+        </ul>
+        <div class="footer-last">
+            <p>Copyright2015-2016&copy胡淘网ihutao.com All Rights Reserved, 京ICP证15048641号 </p>
+            <p>北京东方恒融网络科技有限公司 版权所有</p>
+        </div>
+    </div>

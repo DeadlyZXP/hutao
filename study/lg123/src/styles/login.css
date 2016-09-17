@@ -1,0 +1,412 @@
+@charset "UTF-8";
+body {
+  font-family: "微软雅黑"; }
+
+/*header*/
+#header {
+  position: relative;
+  height: 57px;
+  width: 100%;
+  background: #222; }
+  #header p {
+    color: #ccc;
+    font-size: 22px;
+    margin-left: 300px; }
+  #header .startDesign {
+    position: absolute;
+    top: 450px;
+    left: 42%;
+    color: #fff;
+    font-size: 28px;
+    padding: 8px 20px;
+    background: -webkit-linear-gradient(top, #f17932, #ea5700);
+    border-radius: 4px; }
+    #header .startDesign i {
+      margin-left: 5px; }
+
+.nava {
+  padding-left: 100px;
+  height: 57px;
+  background: rgba(0, 0, 0, 0.25); }
+  .nava a {
+    font-size: 14px;
+    color: #fff;
+    padding: 20px;
+    line-height: 57px; }
+    .nava a:hover {
+      background: #08c; }
+    .nava a i {
+      margin-right: 5px; }
+  .nava .btn_start {
+    margin-left: 20px;
+    padding: 10px 10px;
+    /*background: #ea5700;*/
+    background: -webkit-linear-gradient(top, #f17932, #ea5700);
+    border-radius: 4px; }
+  .nava .btn_start:hover {
+    background: #ea5700; }
+  .nava .myLogin {
+    margin-left: 500px; }
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 46%; }
+  .logo img {
+    top: 20px; }
+  .logo .img1 {
+    position: absolute;
+    z-index: 2; }
+  .logo .img2 {
+    position: absolute;
+    opacity: 0;
+    z-index: 2; }
+
+#btnOn {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  width: 92px;
+  height: 96px;
+  display: block;
+  background: black;
+  z-index: 1; }
+
+#trbtn {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  width: 92px;
+  height: 96px;
+  display: block;
+  background: transparent;
+  z-index: 10; }
+
+.bt {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  width: 1024px;
+  margin: 49px  auto;
+  margin-top: 150px; }
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/*footer*/
+.forwide {
+  padding: 64px 16px 32px;
+  background: url("../images/world-bg.jpg"); }
+  .forwide .footer {
+    width: 1030px;
+    margin: 0 auto; }
+    .forwide .footer .LP {
+      width: 28%;
+      float: left;
+      margin-right: 2%; }
+    .forwide .footer .RP {
+      width: 69.38776%;
+      float: right;
+      margin-right: 0; }
+      .forwide .footer .RP .copyright {
+        color: #999;
+        font-size: 12px;
+        text-align: center;
+        padding: 18px 0 12px 0; }
+        .forwide .footer .RP .copyright span {
+          margin: 0 36px; }
+      .forwide .footer .RP .otherlinks {
+        max-width: 80em;
+        margin: 0 auto; }
+        .forwide .footer .RP .otherlinks li {
+          width: 23%;
+          float: left;
+          margin-right: 1.6%;
+          line-height: 1.5;
+          color: #333; }
+          .forwide .footer .RP .otherlinks li div {
+            padding-left: 14px; }
+            .forwide .footer .RP .otherlinks li div a {
+              display: block;
+              color: #999;
+              font-size: 12px;
+              margin-top: 3px; }
+              .forwide .footer .RP .otherlinks li div a:hover {
+                color: #ffc437; }
+          .forwide .footer .RP .otherlinks li .f-pop {
+            font-size: 13px;
+            display: inline-block;
+            width: 125px;
+            height: 38px;
+            line-height: 30px;
+            text-indent: 6px;
+            color: #c9c9c9;
+            font-weight: normal;
+            margin-bottom: 5px;
+            position: relative;
+            opacity: 0.6; }
+            .forwide .footer .RP .otherlinks li .f-pop span {
+              display: block;
+              position: absolute;
+              width: 130px;
+              height: 30px;
+              background: rgba(240, 240, 240, 0.25);
+              border-radius: 4px; }
+            .forwide .footer .RP .otherlinks li .f-pop i {
+              width: 0;
+              height: 0;
+              border-right: 6px solid transparent;
+              border-left: 6px solid transparent;
+              border-top: 9px solid rgba(240, 240, 240, 0.25);
+              position: absolute;
+              top: 30px;
+              left: 10px; }
+  .forwide .cities {
+    width: 1030px;
+    margin: 0 auto; }
+    .forwide .cities .cities-wrapper {
+      position: relative;
+      text-align: left;
+      padding-left: 142px; }
+      .forwide .cities .cities-wrapper a {
+        display: inline-block;
+        padding: 0 4px;
+        color: #999;
+        background: rgba(240, 240, 240, 0.25);
+        font-size: 12px;
+        margin: 5px 4px; }
+        .forwide .cities .cities-wrapper a:hover {
+          background: #fff;
+          color: #555; }
+  .forwide .b-line {
+    height: 1px;
+    background: #3c3c3c;
+    border-top: 1px solid #1e1c1f;
+    border-bottom: 1px solid #454545;
+    width: 1030px;
+    margin: 0 auto 16px; }
+  .forwide .flinks {
+    width: 1030px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+    background: rgba(240, 240, 240, 0.1); }
+    .forwide .flinks .btn {
+      font-size: 12px;
+      padding: 1px 5px; }
+    .forwide .flinks a {
+      display: inline-block;
+      font-size: 12px;
+      margin: 0 4px;
+      color: #999; }
+
+/*otherpages*/
+.otherpages {
+  background: url("../loginImg/pattern_cutout_2.jpg");
+  padding: 64px 15px; }
+  .otherpages .aboutborder {
+    width: 1030px;
+    padding-bottom: 35px;
+    margin: 0 auto; }
+    .otherpages .aboutborder .body {
+      width: 800px;
+      margin: 0 auto; }
+      .otherpages .aboutborder .body .banner2 {
+        background: #457CE6;
+        border-radius: 6px 6px 0 0; }
+        .otherpages .aboutborder .body .banner2 #bluetitle {
+          font-size: 28px;
+          line-height: 64px;
+          margin-left: 15px;
+          color: #fff; }
+      .otherpages .aboutborder .body .main_body {
+        background: #fff; }
+        .otherpages .aboutborder .body .main_body .sing_up {
+          padding: 24px 0; }
+          .otherpages .aboutborder .body .main_body .sing_up .login_left {
+            border-right: 1px solid #CBCBCB;
+            border-bottom: none;
+            width: 59%;
+            float: left;
+            margin-right: 2%; }
+            .otherpages .aboutborder .body .main_body .sing_up .login_left .RegistPanel {
+              display: none; }
+            .otherpages .aboutborder .body .main_body .sing_up .login_left .to_position_top, .otherpages .aboutborder .body .main_body .sing_up .login_left .RegistPanel {
+              padding-right: 12%;
+              margin: 16%; }
+              .otherpages .aboutborder .body .main_body .sing_up .login_left .to_position_top .input-group-addon, .otherpages .aboutborder .body .main_body .sing_up .login_left .RegistPanel .input-group-addon {
+                height: 46px;
+                font-size: 14px;
+                width: 52px;
+                padding: 0; }
+                .otherpages .aboutborder .body .main_body .sing_up .login_left .to_position_top .input-group-addon .fa-user, .otherpages .aboutborder .body .main_body .sing_up .login_left .to_position_top .input-group-addon .fa-fw, .otherpages .aboutborder .body .main_body .sing_up .login_left .RegistPanel .input-group-addon .fa-user, .otherpages .aboutborder .body .main_body .sing_up .login_left .RegistPanel .input-group-addon .fa-fw {
+                  font-size: 26px; }
+              .otherpages .aboutborder .body .main_body .sing_up .login_left .to_position_top .height, .otherpages .aboutborder .body .main_body .sing_up .login_left .RegistPanel .height {
+                height: 16px; }
+            .otherpages .aboutborder .body .main_body .sing_up .login_left .logmsg {
+              margin: 16px 0;
+              font-size: 15px; }
+            .otherpages .aboutborder .body .main_body .sing_up .login_left .submit {
+              display: inline-block;
+              padding: 9px 30px;
+              text-shadow: 0 1px 0 #fff;
+              background-image: linear-gradient(to bottom, #fff 0, #e0e0e0 100%);
+              box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+              border-color: #ccc; }
+              .otherpages .aboutborder .body .main_body .sing_up .login_left .submit:hover {
+                background: #ccc;
+                color: #333; }
+          .otherpages .aboutborder .body .main_body .sing_up .login_right {
+            width: 38%;
+            float: right;
+            margin-right: 0;
+            padding-top: 72px;
+            font-size: 14px; }
+            .otherpages .aboutborder .body .main_body .sing_up .login_right #changePanel {
+              width: 196px;
+              margin: 0 auto;
+              display: block; }
+              .otherpages .aboutborder .body .main_body .sing_up .login_right #changePanel i {
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                background: url(../loginImg/client-designer.png) no-repeat; }
+              .otherpages .aboutborder .body .main_body .sing_up .login_right #changePanel span {
+                color: #f19149;
+                vertical-align: 13px; }
+            .otherpages .aboutborder .body .main_body .sing_up .login_right .t2 {
+              margin: 0 auto;
+              margin-top: 24px;
+              width: 196px;
+              display: block;
+              color: #08c;
+              font-size: 14px; }
+              .otherpages .aboutborder .body .main_body .sing_up .login_right .t2:hover span {
+                color: #069; }
+              .otherpages .aboutborder .body .main_body .sing_up .login_right .t2 i {
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                background: url(../loginImg/client-designer.png) no-repeat -36px 0; }
+              .otherpages .aboutborder .body .main_body .sing_up .login_right .t2 span {
+                vertical-align: 13px; }
+            .otherpages .aboutborder .body .main_body .sing_up .login_right .lost {
+              display: block;
+              width: 196px;
+              margin: 0 auto;
+              margin-top: 48px; }
+        .otherpages .aboutborder .body .main_body .findpassword {
+          display: none;
+          float: left;
+          border-top: 1px solid #CBCBCB;
+          padding-top: 21px;
+          padding-bottom: 10px;
+          margin: 0px auto;
+          margin-top: 20px;
+          width: 800px; }
+          .otherpages .aboutborder .body .main_body .findpassword .lost_left {
+            border-bottom: none;
+            width: 49%;
+            float: left;
+            margin-right: 2%; }
+            .otherpages .aboutborder .body .main_body .findpassword .lost_left .lost_width {
+              padding-left: 23%;
+              padding-right: 9%; }
+              .otherpages .aboutborder .body .main_body .findpassword .lost_left .lost_width .title {
+                width: 100%;
+                float: left;
+                margin-left: 0;
+                margin-right: 0;
+                font-size: 14px;
+                margin-bottom: 3%; }
+              .otherpages .aboutborder .body .main_body .findpassword .lost_left .lost_width .lost_away {
+                width: 100%;
+                float: left;
+                margin-left: 0;
+                margin-right: 0; }
+                .otherpages .aboutborder .body .main_body .findpassword .lost_left .lost_width .lost_away .lost_user {
+                  border-radius: 4px;
+                  height: 40px;
+                  border: 1px solid #ebebeb;
+                  padding-left: 10px; }
+                .otherpages .aboutborder .body .main_body .findpassword .lost_left .lost_width .lost_away .newlost {
+                  border-radius: 4px;
+                  width: 100px;
+                  height: 40px;
+                  margin-top: 10px; }
+                .otherpages .aboutborder .body .main_body .findpassword .lost_left .lost_width .lost_away .findpwdphonemsg {
+                  width: 207px;
+                  margin: 10px 0; }
+                .otherpages .aboutborder .body .main_body .findpassword .lost_left .lost_width .lost_away .lost_btn {
+                  margin-bottom: 10px; }
+                  .otherpages .aboutborder .body .main_body .findpassword .lost_left .lost_width .lost_away .lost_btn a {
+                    background-image: linear-gradient(to bottom, #fff 0, #e0e0e0 100%); }
+                    .otherpages .aboutborder .body .main_body .findpassword .lost_left .lost_width .lost_away .lost_btn a:hover {
+                      background: #ccc; }
+          .otherpages .aboutborder .body .main_body .findpassword .lost_right {
+            width: 49%;
+            float: right;
+            margin-right: 0; }
+            .otherpages .aboutborder .body .main_body .findpassword .lost_right .lost_width {
+              padding-left: 23%;
+              padding-right: 9%; }
+              .otherpages .aboutborder .body .main_body .findpassword .lost_right .lost_width .title {
+                width: 100%;
+                float: left;
+                margin-left: 0;
+                margin-right: 0;
+                font-size: 14px;
+                margin-bottom: 3%; }
+              .otherpages .aboutborder .body .main_body .findpassword .lost_right .lost_width .lost_away {
+                width: 100%;
+                float: left;
+                margin-right: 0;
+                margin-left: 0; }
+                .otherpages .aboutborder .body .main_body .findpassword .lost_right .lost_width .lost_away .lost_user {
+                  border-radius: 4px;
+                  height: 40px;
+                  border: 1px solid #ebebeb;
+                  padding-left: 10px; }
+                .otherpages .aboutborder .body .main_body .findpassword .lost_right .lost_width .lost_away .newlost {
+                  border-radius: 4px;
+                  width: 100px;
+                  height: 40px;
+                  margin-top: 10px; }
+                .otherpages .aboutborder .body .main_body .findpassword .lost_right .lost_width .lost_away .logmsg {
+                  width: 207px;
+                  margin: 10px 0; }
+                .otherpages .aboutborder .body .main_body .findpassword .lost_right .lost_width .lost_away .btn {
+                  margin-bottom: 10px;
+                  background-image: linear-gradient(to bottom, #fff 0, #e0e0e0 100%); }
+                  .otherpages .aboutborder .body .main_body .findpassword .lost_right .lost_width .lost_away .btn:hover {
+                    background: #ccc; }
+
+/*# sourceMappingURL=login.css.map */

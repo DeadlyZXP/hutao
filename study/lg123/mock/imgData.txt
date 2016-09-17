@@ -1,0 +1,115 @@
+[
+  {   "Uid":0,
+    "productName":"DCconnect(壹步宏景科技）",
+    "taocanName":"bg-green",
+    "taocanChinese":"经济套餐",
+    "mainBusiness":"数据中心互联（链接数据中心内，以及外部的链路，提供数据传输专用通道<br/> 设计用途：公司形象LOGO ,用于名片，网站，文档等",
+    "others":"无",
+    "mainImg":"picture/2016090211180010100.png",
+    "imgSrc":["picture/20160826190313298.png","picture/2016082620412235399600.jpg","picture/2016082615124010100.png","picture/2016082810413735404549.jpg","picture/2016082810134035404753.jpg"]
+  }
+  ,
+ { "Uid":1,
+   "productName":"喜洛玻璃SILO GLASS",
+      "taocanName":"bg-blue",
+      "taocanChinese":"标准套餐",
+      "mainBusiness":"上海喜洛玻璃制品有限公司<br/>公司主营：夹胶玻璃，特殊玻璃，商业道具等各种玻璃产品；以及提供玻璃深加工服务。<br/>图形：可以用英文SILO变型做，也可以发挥想象设计其它图形；",
+      "others":"要求：简单大气，艺术感，稳重",
+      "mainImg":"picture/2016081015092710100.png",
+      "imgSrc":["picture/2016082810134035404753.jpg","picture/2016081210095435404753.jpg","picture/2016081117504335399763.jpg","picture/201608100948267440.png","picture/2016082810134035404753.jpg","picture/2016082810134035404753.jpg","picture/2016082810134035404753.jpg","picture/2016082810134035404753.jpg","picture/2016081210095435404753.jpg","picture/2016081210095435404753.jpg"]
+  },
+   { "Uid":2,
+     "productName":"城市之光BOOK主题咖啡厅",
+        "taocanName":"bg-red",
+        "taocanChinese":"豪华套餐",
+        "mainBusiness":"城市之光BOOK主题西餐厅,其名字源自卓别林的电影《城市之光》。源自自己的理想：成为城市之光，温暖和照亮我们的城",
+        "others":"",
+        "mainImg":"picture/20160904005811298.png",
+        "imgSrc":["picture/20160812092642761.jpg","picture/2016081210095435404753.jpg","picture/2016081117504335399763.jpg","picture/201608100948267440.png","picture/2016082810134035404753.jpg"]
+    },
+    {    "Uid":3,
+        "productName":"亿鲜食品1-xian",
+        "taocanName":"bg-blue",
+        "taocanChinese":"标准套餐",
+        "mainBusiness":"厦门亿鲜食品<br/>主要进口海鲜，鸡，猪，牛等冻品。<br/>结构：图形+中英文；",
+        "others":"无",
+        "mainImg":"picture/2016090220253710100.jpg",
+        "imgSrc":["picture/20160826190313298.png","picture/2016082620412235399600.jpg","picture/2016082615124010100.png","picture/2016082810413735404549.jpg","picture/2016082810134035404753.jpg"]
+      }
+      ,
+     {   "Uid":4,
+       "productName":"喜洛玻璃SILO GLASS",
+          "taocanName":"bg-blue",
+          "taocanChinese":"标准套餐",
+          "mainBusiness":"上海喜洛玻璃制品有限公司<br/>公司主营：夹胶玻璃，特殊玻璃，商业道具等各种玻璃产品；以及提供玻璃深加工服务。<br/>图形：可以用英文SILO变型做，也可以发挥想象设计其它图形；",
+          "others":"要求：简单大气，艺术感，稳重",
+          "mainImg":"picture/20160831144746298.png",
+          "imgSrc":["picture/20160812092642761.jpg","picture/2016081210095435404753.jpg","picture/2016081117504335399763.jpg","picture/201608100948267440.png","picture/2016082810134035404753.jpg"]
+      },
+       { "Uid":5,
+         "productName":"城市之光BOOK主题咖啡厅",
+            "taocanName":"bg-blue",
+            "taocanChinese":"标准套餐",
+            "mainBusiness":"城市之光BOOK主题西餐厅,其名字源自卓别林的电影《城市之光》。源自自己的理想：成为城市之光，温暖和照亮我们的城<br/>城市之光匠心独运地将涂鸦艺术、工业文化与书吧元素融为一体，秉承人文、艺术、创意、生活的理念，强调自信、勇敢、团结的团队精神，强调人们对美好理想和极致生活的追求，强调复合、多元、动态的文化事业",
+            "others":"",
+            "mainImg":"picture/20160819152026206.png",
+            "imgSrc":["picture/20160812092642761.jpg","picture/2016081210095435404753.jpg","picture/2016081117504335399763.jpg","picture/201608100948267440.png","picture/2016082810134035404753.jpg"]
+        }
+,{   "Uid":6,
+     "productName":"DCconnect(壹步宏景科技）",
+     "taocanName":"bg-blue",
+     "taocanChinese":"标准套餐",
+     "mainBusiness":"数据中心互联（链接数据中心内，以及外部的链路，提供数据传输专用通道<br/> 设计用途：公司形象LOGO ,用于名片，网站，文档等",
+     "others":"无",
+     "mainImg":"picture/201608311546214715.jpg",
+     "imgSrc":["picture/20160826190313298.png","picture/2016082620412235399600.jpg","picture/2016082615124010100.png","picture/2016082810413735404549.jpg","picture/2016082810134035404753.jpg"]
+   }
+   ,
+  {  "Uid":7,
+    "productName":"喜洛玻璃SILO GLASS",
+       "taocanName":"bg-green",
+       "taocanChinese":"经济套餐",
+       "mainBusiness":"上海喜洛玻璃制品有限公司<br/>公司主营：夹胶玻璃，特殊玻璃，商业道具等各种玻璃产品；以及提供玻璃深加工服务。<br/>图形：可以用英文SILO变型做，也可以发挥想象设计其它图形；",
+       "others":"要求：简单大气，艺术感，稳重",
+       "mainImg":"picture/20160831150102300.jpg",
+       "imgSrc":["picture/20160812092642761.jpg","picture/2016081210095435404753.jpg","picture/2016081117504335399763.jpg","picture/201608100948267440.png","picture/2016082810134035404753.jpg"]
+   },
+    {    "Uid":8,
+      "productName":"城市之光BOOK主题咖啡厅",
+         "taocanName":"bg-blue",
+         "taocanChinese":"标准套餐",
+         "mainBusiness":"城市之光BOOK主题西餐厅,其名字源自卓别林的电影《城市之光》。源自自己的理想：成为城市之光，温暖和照亮我们的城<br/>城市之光匠心独运地将涂鸦艺术、工业文化与书吧元素融为一体，秉承人文、艺术、创意、生活的理念，强调自信、勇敢、团结的团队精神，强调人们对美好理想和极致生活的追求，强调复合、多元、动态的文化事业",
+         "others":"",
+         "mainImg":"picture/2016083122241335404617.jpg",
+         "imgSrc":["picture/20160812092642761.jpg","picture/2016081210095435404753.jpg","picture/2016081117504335399763.jpg","picture/201608100948267440.png","picture/2016082810134035404753.jpg"]
+     }
+,{   "Uid":9,
+     "productName":"DCconnect(壹步宏景科技）",
+     "taocanName":"bg-green",
+     "taocanChinese":"经济套餐",
+     "mainBusiness":"数据中心互联（链接数据中心内，以及外部的链路，提供数据传输专用通道<br/> 设计用途：公司形象LOGO ,用于名片，网站，文档等",
+     "others":"无",
+     "mainImg":"picture/201608231548365313.jpg",
+     "imgSrc":["picture/20160826190313298.png","picture/2016082620412235399600.jpg","picture/2016082615124010100.png","picture/2016082810413735404549.jpg","picture/2016082810134035404753.jpg"]
+   }
+   ,
+  {  "Uid":10,
+    "productName":"喜洛玻璃SILO GLASS",
+       "taocanName":"bg-blue",
+       "taocanChinese":"标准套餐",
+       "mainBusiness":"上海喜洛玻璃制品有限公司<br/>公司主营：夹胶玻璃，特殊玻璃，商业道具等各种玻璃产品；以及提供玻璃深加工服务。<br/>图形：可以用英文SILO变型做，也可以发挥想象设计其它图形；",
+       "others":"要求：简单大气，艺术感，稳重",
+       "mainImg":"picture/20160830091131879.png",
+       "imgSrc":["picture/20160812092642761.jpg","picture/2016081210095435404753.jpg","picture/2016081117504335399763.jpg","picture/201608100948267440.png","picture/2016082810134035404753.jpg"]
+   },
+    {    "Uid":11,
+      "productName":"城市之光BOOK主题咖啡厅",
+         "taocanName":"bg-green",
+         "taocanChinese":"经济套餐",
+         "mainBusiness":"城市之光BOOK主题西餐厅,其名字源自卓别林的电影《城市之光》。源自自己的理想：成为城市之光，温暖和照亮我们的城<br/>城市之光匠心独运地将涂鸦艺术、工业文化与书吧元素融为一体，秉承人文、艺术、创意、生活的理念，强调自信、勇敢、团结的团队精神，强调人们对美好理想和极致生活的追求，强调复合、多元、动态的文化事业",
+         "others":"",
+         "mainImg":"picture/2016082714121535356429.png",
+         "imgSrc":["picture/20160812092642761.jpg","picture/2016081210095435404753.jpg","picture/2016081117504335399763.jpg","picture/201608100948267440.png","picture/2016082810134035404753.jpg"]
+     }
+
+]

@@ -1,0 +1,14 @@
+<div class="rightsidefixeddiv">
+    <a href="#" id="zxzx"></a>
+    <span class="qrcodeicon">
+        <i class="fa fa-qrcode">    </i>
+        <p>微信优惠</p>
+        <div class="showqrcode">
+            <img src="/picture/8cm.jpg" alt="#">
+            <p>扫一扫,有优惠哦!</p>
+        </div>
+    </span>
+    <a href="#" id="contactusright">
+        <img class="hotline" src="/picture/hotline.png" alt="#">
+    </a>
+</div>

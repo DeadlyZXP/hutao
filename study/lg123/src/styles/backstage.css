@@ -1,0 +1,43 @@
+html, body {
+  height: 100%; }
+
+.header {
+  background: rgba(0, 0, 0, 0.4);
+  padding-top: 25px;
+  padding-bottom: 20px;
+  position: relative; }
+  .header h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #fff; }
+  .header .user {
+    font-size: 22px;
+    position: absolute;
+    right: 10px;
+    top: 30px; }
+
+.slideBar {
+  float: left;
+  width: 200px;
+  background: lightgoldenrodyellow;
+  height: 100%; }
+
+.slideBar .barWarp .item {
+  width: 100%;
+  background: lightgoldenrodyellow; }
+  .slideBar .barWarp .item:hover {
+    background: #fff; }
+    .slideBar .barWarp .item:hover a {
+      color: #333; }
+
+.box {
+  height: 100%;
+  background: #ccc; }
+  .box h2 {
+    margin-top: 0;
+    font-size: 40px;
+    font-weight: bold; }
+  .box iframe {
+    border: none; }
+
+/*# sourceMappingURL=backstage.css.map */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>胡淘-最in的全球直购扫货神器</title>
+    <!--<link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/index.css" type="text/css">-->
+    <link rel="stylesheet" type="text/css" href="/hutao/prd/styles/app.css"/>
+    <!--<script src="js/jquery-3.1.0.js"></script>-->
+    <!--<script src="js/move.js" type="text/javascript"></script>
+    <script src="js/moveUti.js"></script>
+    <script src="js/main.js"></script>-->
+</head>
+<body>
+    <script src="/hutao/prd/scripts/app.js"></script>
+    <!--<script>
+        var olIcontainer=document.getElementById("container-bottom-ul").children;
+        var Ul=document.getElementById("container-bottom-ul");
+        var Oul=document.getElementById("banner-ul");
+        var Oul2=document.getElementById("banner-ul2");
+        var Lilist=Oul2.children;
+        var lidl=document.getElementsByClassName("container-bottom-ul-dl");
+        var pageindex=1;
+        start();
+        var timer;
+        function start() {
+            timer=setInterval(function () {
+                if(pageindex==6){
+                    Oul.style.left=0;
+                    pageindex=1;
+                }
+                var target={
+                    left:pageindex*-900
+                }
+                Move(Oul,target);
+                pageindex++;
+                setPageindex(pageindex);
+            },4000)
+        }
+        setPageindex=function (index) {
+            for(var i=0;i<Lilist.length;i++){
+                Lilist[i].className="liom";
+            }if(index==6){
+                Lilist[0].className="lion";
+            }else{
+                Lilist[index-1].className="lion";
+            }
+        }
+        for(var i=0;i<Lilist.length;i++){
+            Lilist[i].index=i;
+            Lilist[i].onclick=function () {
+                clearInterval(timer);//点击时清除自动轮播
+//                Imgbox.children[this.index].;
+                var target={
+                    left:(this.index)*(-900)
+                }
+                Move(Oul,target,start);//点击后回调自动轮播
+                pageindex=this.index;//防止点击后图片跳页
+                setPageindex(this.index+1);//点击时Ul2里li的背景图也随时改变；
+            }
+        }
+        for(var i=0;i<olIcontainer.length;i++) {
+            olIcontainer[i].index=i;
+            olIcontainer[i].onmouseover=function(){
+//               alert(this.index);
+                var targe={top:185}
+                Move(lidl[this.index],targe)
+            }
+            olIcontainer[i].onmouseout=function(){
+//               alert(this.index);
+                var targe={top:357}
+                Move(lidl[this.index],targe)
+            }
+        }
+        MoveBodyRight();
+    </script>-->
+</body>
+</html>

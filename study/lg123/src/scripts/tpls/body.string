@@ -1,0 +1,270 @@
+<div class="dashboard">
+    <div class="spb">
+        <div class="totaldesigns">
+            <span class="num" id="add"></span><span>家</span>
+        </div>
+        <p>今日新增</p>
+    </div>
+    <div class="spb">
+        <div class="totaldesigns">
+            <span class="num" id="count"></span><span>家</span>
+        </div>
+        <p>服务企业</p>
+    </div>
+    <div class="spb">
+        <div class="totaldesigns">
+            <span class="num" id="desinger"></span><span>名</span>
+        </div>
+        <p>LOGO设计师</p>
+    </div>
+    <div class="spb">
+        <div class="totaldesigns">
+            <span class="num">96.5%</span>
+        </div>
+        <p>客户满意度</p>
+    </div>
+
+</div>
+<div class="caselist">
+    <h2 class="index_title">LOGO设计，关键是创意!</h2>
+    <p class="index_sub_title">我们坚持安排多名专业设计师通过“设计竞赛”的方式来为客户赢得更多，更好的logo设计作品！</p>
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#li1" data-toggle="tab" class="tb">      最新
+            </a>
+        </li>
+        <li><a class="tb" href="#li2" data-toggle="tab">餐饮</a></li>
+        <li><a  class="tb" href="#li3" data-toggle="tab">地产</a></li>
+        <li><a href="#li4" class="tb" data-toggle="tab">网站</a></li>
+        <li><a href="#li5"  class="tb"data-toggle="tab">教育</a></li>
+        <li><a href="https://baidu.com" class="tb">更多</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active clearfix" id="li1">
+        </div>
+        <div class="tab-pane fade clearfix" id="li2">        </div>
+        <div class="tab-pane fade clearfix" id="li3">
+
+        </div>
+        <div class="tab-pane fade clearfix" id="li4">
+
+        </div>
+        <div class="tab-pane fade clearfix" id="li5">
+          <!--  <div class="imgouter">
+                <span class="bg-green">经济套餐</span>
+                <img  class="logos" src="picture/2016090211180010100.png" >
+            </div>-->
+
+        </div>
+        <button type="button" class="btn btn-block btn-more ">加载更多</button>
+        <div class="tags" style="margin-top: 20px;padding:1em 0;">
+            <a href="#">家电类</a>
+            <a href="#">自然标志设计</a>
+            <a href="#">甜品店</a>
+            <a href="#">农产品</a>
+            <a href="#">协会机构</a>
+            <a href="#">维修店</a>
+            <a href="#">中国风</a>
+            <a href="#">植物元素</a>
+            <a href="#">办公类</a>
+            <a href="#">生鲜标志设计</a>
+            <a href="#">公益类</a>
+            <a href="#">健身房</a>
+            <a href="#">外卖快餐</a>
+            <a href="#">社交类</a>
+            <a href="#">智能科技</a>
+            <a href="#">宠物类</a>
+            <a href="#">租赁公司</a>
+            <a href="#">健康元素</a>
+            <a href="#">环保标志设计</a>
+            <a href="#">游戏标志设计</a>
+        </div>
+    </div>
+
+</div>
+<div class="howitworks text-center clearfix">
+    <h2 class="index_title" style="padding-bottom: 1rem;">经济实惠的logo设计套餐</h2>
+        <div class="taocan-intro">
+            <a href="start.html" class="item tc1">
+                <div class="top-title-block">
+                    <span class="select"><i class="fa fa-check"></i></span>
+                    <div class="tchead">经济套餐</div>
+                    <p>399元</p>
+                </div>
+                <div class="bottom-content-block">
+                    <p><span class="dot">.</span>
+                        <b>3</b>
+                        名设计师参与初稿创作
+                    </p>
+                    <p><span class="dot">.</span>
+                        至少提供
+                        <b>5</b>
+                        款设计方案
+                    </p>
+                    <p><span class="dot">.</span>
+                        <b>1</b>
+                        名设计师入围修改完善
+                    </p>
+                    <p class="btm">
+                        <span class="dot">.</span>
+                        100%原创版权+矢量源文件
+                    </p>
+                </div>
+            </a>
+            <a href="start.html" class="item tc2">
+                <div class="top-title-block">
+                    <span class="select"><i class="fa fa-check"></i></span>
+                    <div class="tchead">标准套餐</div>
+                    <p>599元</p>
+                </div>
+                <div class="bottom-content-block">
+                    <p><span class="dot">.</span>
+                        <b>5</b>
+                        名设计师参与初稿创作
+                    </p>
+                    <p><span class="dot">.</span>
+                        至少提供
+                        <b>10</b>
+                        款设计方案
+                    </p>
+                    <p><span class="dot">.</span>
+                        <b>2</b>
+                        名设计师入围修改完善
+                    </p>
+                    <p><span class="plus">+</span>
+                        黑白墨稿用于传真及商标
+                    </p>
+                    <p class="btm">
+                        <span class="dot">.</span>
+                        100%原创版权+矢量源文件
+                    </p>
+                </div>
+            </a>
+            <a href="start.html" class="item tc3">
+                <div class="top-title-block">
+                    <span class="select"><i class="fa fa-check"></i></span>
+                    <div class="tchead">豪华套餐</div>
+                    <p>899元</p>
+                </div>
+                <div class="bottom-content-block">
+                    <p><span class="dot">.</span>
+                        <b>8</b>
+                        名设计师参与初稿创作
+                    </p>
+                    <p><span class="dot">.</span>
+                        至少提供
+                        <b>15</b>
+                        款设计方案
+                    </p>
+                    <p><span class="dot">.</span>
+                        <b>3</b>
+                        名设计师入围修改完善
+                    </p>
+                    <p><span class="plus">+</span>
+                        黑白墨稿用于传真及商标
+                    </p>
+                    <p><span class="plus">+</span>
+                        黑白墨稿用于传真及商标
+                    </p>
+                    <p class="btm">
+                        <span class="dot">.</span>
+                        100%原创版权+矢量源文件
+                    </p>
+                </div>
+            </a>
+            <a href="start.html" class="item tc4">
+                <div class="top-title-block">
+                    <span class="select"><i class="fa fa-check"></i></span>
+                    <div class="tchead">标准套餐</div>
+                    <p>599元</p>
+                </div>
+                <div class="bottom-content-block">
+                  总监出马
+                    <br>
+
+                    轻松获得完美标志
+
+                </div>
+            </a>
+        </div>
+</div>
+<div class="bannerlist text-center">
+    <h2 class="index_title" style="padding-bottom: 1rem;">我们logo博客的精彩文章</h2>
+    <div class="owlContainer">
+        <div id="owl-demo" class="owl-carousel">
+            <a href="#" class="blogarticle">
+                <img src="/picture/G20-峰会logo设计1.jpg" alt="" title="G20-峰会logo设计">
+                <p>G20-峰会logo设计</p>
+            </a>
+            <a href="#" class="blogarticle">
+                <img src="/picture/色彩丰富的波普风，又悄悄刮起了一股复古潮流110.jpg" title="色彩丰富的波普风，又悄悄刮起了一股复古潮流110" alt="">
+                <p>色彩丰富的波普风，又悄悄刮起了一股复古潮流</p>
+            </a>
+            <a href="#" class="blogarticle">
+                <img src="/picture/争做辣条界iPhone的卫龙，首先在设计上就证明了自己做到了！1.jpg" alt="">
+                <p>争做辣条界iPhone的卫龙，首先在设计上就证明了自己做到了！</p>
+            </a>
+            <a href="#" class="blogarticle">
+                <img src="/picture/益达借力奥运会，十几天做的广告竟然远远超过可口可乐100年的努力1.jpg" alt="">
+                <p>益达借力奥运会，十几天做的广告竟然远远超过可口可乐100年的努力</p>
+            </a>
+            <a href="#" class="blogarticle">
+                <img src="/picture/在奢侈品界里，tiffany成为不仅可以拼颜值还很走心的一股清流1.jpg" alt="">
+                <p>在奢侈品界里，tiffany成为不仅可以拼颜值还很走心的一股清流</p>
+            </a>
+            <a href="#" class="blogarticle">
+                <img src="/picture/在包装设计上如何先有一个小目标，然后轻松实现实现一个亿的效果1.jpg" alt="">
+                <p>在包装设计上如何先有一个小目标，然后轻松实现实现一个亿的效果</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="index_reviews text-center">
+    <h2 class="index_title">
+        <span class="yellow">96.5%</span>客户满意度，来自<span style="color:#08c;">2911</span> 位客户的综合评价
+    </h2>
+    <div class="text-center btns">
+        <a href="#">客户评价</a>
+        <a href="#">精彩案例</a>
+        <a href="#">刚刚结束的项目</a>
+    </div>
+</div>
+<div class="partners text-center">
+    <h2 class="index_title">一站式创业服务，我们的合作小伙伴</h2>
+    <div class="partners-wrapper clearfix">
+        <a href="#" class="item">
+            <img src="/picture/partners-36kr-grey.jpg" alt="36KR">
+            <img src="/picture/partners-36kr-color.jpg" alt="36KR">
+            <p class="label-word">创业资讯</p></a>
+        <a href="#" class="item">
+            <img src="/picture/partners-ms-grey.jpg" alt="">
+            <img src="/picture/partners-ms-color.jpg" alt="">
+            <p class="label-word">程序外包</p></a>
+        <a href="#" class="item">
+            <img src="/picture/partners-kfw-grey.jpg" alt="">
+            <img src="/picture/partners-kfw-color.jpg" alt="">
+            <p class="label-word">公司注册</p></a>
+        <a href="#" class="item">
+            <img src="/picture/partners-sxl-grey.jpg" alt="">
+            <img src="/picture/partners-sxl-color.jpg" alt="">
+            <p class="label-word">网站搭建</p></a>
+        <a href="#" class="item"><img src="/picture/partners-zgg-grey.jpg" alt="">
+            <img src="/picture/partners-zgg-color.jpg" alt="">
+            <p class="label-word">商标注册</p></a>
+    </div>
+</div>
+<div class="startpost text-center">
+    <h2 class="index_title">PC + 手机 + 微信 ， 一个网站通通搞定！</h2>
+    <div class="crowdsourcesteps clearfix">
+        <div class="wow fadeIn"  data-wow-duration="2s">
+            <span><i class="fa fa-television" style="vertical-align: -8px;margin-left: 2px;font-size: 40px;color: #fff"></i></span>
+            <p class="text-center" style="margin: 8px 0 0;font-size:16px;">PC云网站</p></div>
+        <div class="wow fadeIn"  data-wow-duration="2s">
+            <span ><i class="fa fa-mobile-phone" style="font-size: 54px;vertical-align: -13px;color:#fff"></i></span>
+            <p class="text-center" style="margin: 8px 0 0;font-size:16px;">手机云网站</p></div>
+        <div class="wow fadeIn"  data-wow-duration="2s">
+            <span ><i class="fa fa-wechat" style="vertical-align: -9px;margin-left: 4px;color: #fff;font-size: 48px;"></i></span>
+            <p class="text-center" style="margin: 8px 0 0;font-size:16px;">微信云网站</p></div>
+    </div>
+    <a href="#" class="btn btn-lg">123响应式网站建设<i class="fa fa-arrow-circle-right"></i></a>
+</div>

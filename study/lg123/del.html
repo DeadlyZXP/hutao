@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>del</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="text-center">
+	<h2>请输入你要删除商品的ID</h2>
+	<input type="text" id="del_id" placeholder="ID为数字" class="">
+	<a href="#" class="btn btn-danger" id="del">删除</a>
+	<h4></h4>
+</div>
+<script>
+	$(function(){
+		$("#del").click(function(){
+			if($("#del_id").val().length!=0){
+				$.ajax({
+					url:"../product/DeleteProductById_get",
+					data:{
+						id:$("#del_id").val()
+					},
+					success:function(data){
+						if(data==1){
+							$("h4").html("<span style='color: green'>删除成功</span>")
+						}else {
+							$("h4").html("<span style='color: orange'>该ID不存在</span>")
+						}
+					}
+				})
+			}else {
+				$("h4").html("<span style='color: red'>请输入一个你要删除的ID</span>")
+			}
+		})
+	})
+</script>
+
+</body>
+</html>

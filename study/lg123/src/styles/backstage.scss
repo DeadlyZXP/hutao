@@ -1,0 +1,52 @@
+html,body{height: 100%;}
+.header{
+  background: rgba(0,0,0,0.4);
+  padding-top: 25px;
+  padding-bottom: 20px;
+  position: relative;
+  h1{
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+  }
+  .user{
+    font-size: 22px;
+    position: absolute;
+    right: 10px;
+    top:30px;
+  }
+}
+.slideBar{
+  float: left;
+  width: 200px;
+  background: lightgoldenrodyellow;
+  height: 100%;
+}
+.slideBar{
+  .barWarp{
+    .item{
+      width: 100%;
+      background: lightgoldenrodyellow;
+      &:hover{
+        background: #fff;
+        a{
+          color: #333;
+        }
+
+      }
+    }
+
+  }
+}
+.box{
+  height: 100%;
+  background: #ccc;
+  h2{
+    margin-top: 0;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  iframe{
+    border: none;
+  }
+}

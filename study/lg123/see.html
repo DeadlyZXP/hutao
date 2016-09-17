@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+		#main{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		#main td,th{
+			border: 1px solid #ccc;
+			width: 100px;
+			text-align: center;
+		}
+		.box{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<table id="main" class="table table-hover table-striped">
+	<tr><th>商品ID</th><th>商品名称</th><th>商品介绍</th><th>商品价格</th><th>修改？</th></tr>
+
+</table>
+<div class="box">
+	<ul class="pager">
+		<li><a href="#" id="prev" class="btnmore">Previous</a></li>
+		<li><a href="#" id="next" class="btnmore">Next</a></li>
+	</ul>
+</div>
+<script>
+	var i=1;
+	addajax();
+	$(document).on("click","a.btnmore",function(){
+		if(event.target.id=="prev") {
+			if(i>1){
+				i--;
+				$(".tr").remove()
+				addajax();
+			}
+
+
+		}
+		else {
+
+				i++;
+				$(".tr").remove()
+				addajax();
+
+
+		}
+		return false;
+	})
+	function addajax(){
+		$.ajax({
+			url:"../product/GetProductsByPage_get",
+			data:{
+				pagesize:5,
+				pageindex:i
+			},
+			success:function(data){
+				console.log(data)
+
+				for(var i=0;i<data.length;i++){
+					var obj=JSON.parse(data[i].Data)
+					$("<tr class='tr'><td>"+obj.id+"</td><td>"+obj.spmc+"</td><td>"+obj.spjs+"</td><td>"+obj.spjg+"元</td><td><a href='#' class='edit'>编辑</a> </td></tr>").appendTo($("#main"))
+				}
+			},
+			dataType:"json"
+		})
+	}
+	$(document).on("click",".edit",function(){
+		var f=$(this).parent().parent().children();
+		window.open("addpage.html?ID="+ f.eq(0).text(),"_self")
+	})
+
+</script>
+</body>
+</html>

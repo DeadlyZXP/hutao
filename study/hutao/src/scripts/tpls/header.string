@@ -1,0 +1,47 @@
+<div class="headbox clear">
+        <!--登录栏开始-->
+        <div class="header-headerbox">
+            <div class="header-header">
+                <img src="img/home-phone-pic.png">
+                <p>400-687-3226</p>
+                <ul class="headr">
+                    <li><a href="#" class="header-name">登录</a></li>
+                    <li><a href="register.html">免费注册</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--登陆栏结束-->
+        <!--logo 搜索栏 开始-->
+        <div class="header-logo-search">
+            <a href="index.html"><img src="img/logo.png"/></a>
+            <div class="header-search">
+                <ul class="header-search-ul">
+                    <li>商品</li>
+                    <li>店铺</li>
+                </ul>
+                <form class="search-form clear">
+                    <input type="button" class="search-fdj">
+                    <input type="text" class="search-text" placeholder="请输入商品">
+                    <input type="submit" class="search-search" value="搜索">
+                </form>
+                <div class="header-search-shoppingcar">
+                    <span class="header-search-shoppingcar-img"></span>
+                    <span class="shoppingcar">购物车</span>
+                    <span class="mylove">我喜欢的</span>
+                </div>
+            </div>
+        </div>
+        <!--搜索栏结束-->
+        <!--导航栏开始-->
+        <div class="header-nav">
+            <ul class="header-nav-ul">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">国家主题</a></li>
+                <li><a href="#">全球特卖</a></li>
+                <li><a href="#">海外直邮</a></li>
+                <li><a href="#">胡淘社区</a></li>
+                <span><a href="#">下载手机版</a></span>
+            </ul>
+        </div>
+    </div>

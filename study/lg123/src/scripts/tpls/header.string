@@ -1,0 +1,19 @@
+<div id="header">
+    <div class="nava">
+        <a href="index.html"><i class="fa fa-home"></i>首页</a><a href="#">Logo设计</a><a href="brand.html">商标注册</a><a href="#">设计服务</a><a href="login.html"
+                                                                                                 class="myLogin"><i
+            class="fa fa-user "></i>我的账户</a><a href="start.html" class="btn_start">开始设计 <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+    <div class="logo">
+        <img class="animated img1 ani-auto" ani-duration="0.2s" src="/images/logo-word1.png" alt="#">
+        <img class="animated img2 ani-auto" ani-duration="0.2s"
+             src="/images/logo-rocket1.png" alt="#">
+
+    </div>
+    <a href="#" id="btnOn">
+
+    </a>
+    <h1 class="bt">经济实惠的企业LOGO设计只需￥399元起!</h1>
+    <p>在线下单,我们 <span class="typed"></span></p>
+    <a href="start.html" class="startDesign">开始设计<i class="fa fa-arrow-circle-right "></i></a>
+</div>
